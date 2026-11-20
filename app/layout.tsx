@@ -25,11 +25,11 @@ export default function RootLayout({
           <ViewModeProvider>
             {/* Outer Wrapper: Centers the entire two-column site horizontally on the screen */}
             <div className="min-h-screen bg-white flex justify-center w-full">
-              <div className="w-full max-w-[960px] flex min-h-screen relative">
+              <div className="w-full max-w-[1024px] flex min-h-screen relative">
                 {/* Left Sidebar: Sticky within the centered container */}
                 <Sidebar />
                 {/* Right Content Area: Adjacent to the sidebar within the centered container */}
-                <main className="flex-1 min-h-screen border-l border-gray-200/80 px-8 sm:px-12 py-10 bg-white max-w-[700px]">
+                <main className="flex-1 min-h-screen border-l border-gray-200/80 px-8 sm:px-12 py-10 bg-white max-w-[764px]">
                   {children}
                 </main>
               </div>

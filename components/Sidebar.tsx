@@ -123,9 +123,9 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
         <Image
           src="/images/Superadmission_New Wordmark_Device.svg"
           alt="Superadmission"
-          width={160}
-          height={24}
-          className="h-[21px] w-auto object-contain"
+          width={180}
+          height={28}
+          className="h-[25px] w-auto object-contain"
           priority
         />
       </Link>
