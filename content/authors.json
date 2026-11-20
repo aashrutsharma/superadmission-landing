@@ -1,0 +1,23 @@
+[
+  {
+    "id": "aashrut-sharma",
+    "name": "Aashrut Sharma",
+    "role": "Founder & Architect",
+    "bio": "Working on unified digital public infrastructure for Indian college admissions.",
+    "email": "aashrut@superadmission.com"
+  },
+  {
+    "id": "superadmission-team",
+    "name": "Superadmission Team",
+    "role": "Core Protocol Team",
+    "bio": "Engineering and policy updates from the Superadmission development group.",
+    "email": "team@superadmission.com"
+  },
+  {
+    "id": "vedant-sharma",
+    "name": "Vedant Sharma",
+    "role": "Research & Systems",
+    "bio": "Focusing on seat reconciliation algorithms and multi-round counselling dynamics.",
+    "email": "vedant@superadmission.com"
+  }
+]

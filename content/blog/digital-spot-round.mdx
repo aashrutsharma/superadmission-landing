@@ -1,0 +1,33 @@
+---
+title: "How counselling authorities can run a fully digital spot round"
+date: "2026-11-01"
+author: "Superadmission Team"
+readTime: "6 min read"
+excerpt: "Spot rounds are notoriously manual. Here is a blueprint for running them entirely online, with real-time seat updates and a full audit trail."
+tags:
+  - Counselling
+  - Architecture
+  - Spot Round
+---
+
+## The Challenge of Spot Rounds
+
+Spot rounds in Indian college admissions are traditionally chaotic and manual. Students travel across states with physical documents and bank drafts, waiting in packed auditoriums hoping a vacancy opens up in their preferred branch.
+
+Institutions struggle equally: seat matrices change minute by minute as students accept offers elsewhere, leading to vacant seats or over-subscription.
+
+## Architectural Blueprint for Digital Spot Rounds
+
+To transition spot rounds into a transparent, digital-first process, three key components are required:
+
+### 1. Real-Time Seat Matrix Sync
+
+Using distributed event streaming, seat vacancy events must be published in real time. Whenever a candidate forfeits a seat or moves to an upgraded tier, the vacant seat is immediately synchronized across counselling portals.
+
+### 2. Verified Credential Checking
+
+By integrating with **APAAR** and **DigiLocker**, candidate qualifications, caste certificates, and domicile proofs are verified before the round starts, removing in-person verification queues.
+
+### 3. Transparent Algorithmic Allocation
+
+The allocation engine processes preference lists in deterministic batches with public verifiable cryptographic logs, ensuring no backdoor allocations take place.
