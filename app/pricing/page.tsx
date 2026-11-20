@@ -90,7 +90,7 @@ export default function PricingPage() {
               </div>
               <div className="text-right flex-shrink-0">
                 <p
-                  className={`text-xl font-medium ${tier.highlight ? "text-[#2563eb]" : "text-gray-950"}`}
+                  className={`text-xl font-medium ${tier.highlight ? "text-[#9e790d]" : "text-gray-950"}`}
                 >
                   {tier.price}
                 </p>
@@ -105,7 +105,7 @@ export default function PricingPage() {
                 >
                   <span
                     className={`w-1.5 h-1.5 rounded-full flex-shrink-0 mt-1.5 ${
-                      tier.highlight ? "bg-blue-500" : "bg-gray-400"
+                      tier.highlight ? "bg-[#9e790d]" : "bg-gray-400"
                     }`}
                   />
                   {feature}
@@ -119,7 +119,7 @@ export default function PricingPage() {
               rel={tier.ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
               className={`inline-flex items-center text-xs font-semibold px-3.5 py-2 rounded-[3px] transition-colors no-underline uppercase tracking-wider ${
                 tier.highlight
-                  ? "bg-[#2563eb] text-white hover:bg-blue-700 shadow-2xs"
+                  ? "bg-[#9e790d] text-white hover:bg-[#85660b] shadow-2xs"
                   : "border border-gray-200 text-gray-800 hover:bg-gray-50"
               }`}
             >

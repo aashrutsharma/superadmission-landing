@@ -92,7 +92,7 @@ export default function Home() {
             href="https://superadmission.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#2563eb] text-white hover:bg-blue-700 text-xs font-semibold px-3.5 py-2 rounded-[3px] transition-colors no-underline uppercase tracking-wider shadow-2xs"
+            className="inline-flex items-center gap-2 bg-[#9e790d] text-white hover:bg-[#85660b] text-xs font-semibold px-3.5 py-2 rounded-[3px] transition-colors no-underline uppercase tracking-wider shadow-2xs"
           >
             <div className="w-3.5 h-3.5 relative">
               <Image

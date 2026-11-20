@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import PixelSparkline from "./PixelSparkline";
+import HeatGraphActivity from "./HeatGraphActivity";
 import PublicBenchmarkBar from "./PublicBenchmarkBar";
 import BenchmarkLineChart from "./BenchmarkLineChart";
 
@@ -60,7 +60,7 @@ export default function ProductionGrid() {
               NATIONAL ADMISSIONS AUDIT, 2026
             </p>
             <p className="text-[13px] text-gray-700 leading-relaxed font-normal">
-              &ldquo;Superadmission <mark className="bg-blue-100 text-[#2563eb] px-1 py-0.5 rounded-[2px] font-medium">performs best overall</mark>, achieving round reconciliation completion rate of 99.82% and the lowest vacancy discrepancy rate of 0.08%.&rdquo;
+              &ldquo;Superadmission <mark className="bg-amber-100/80 text-[#9e790d] px-1 py-0.5 rounded-[2px] font-medium">performs best overall</mark>, achieving round reconciliation completion rate of 99.82% and the lowest vacancy discrepancy rate of 0.08%.&rdquo;
             </p>
           </div>
           <div className="flex items-center gap-4 mt-5 pt-3.5 border-t border-gray-100 text-xs font-medium">
@@ -87,7 +87,7 @@ export default function ProductionGrid() {
               </p>
               <div className="text-3xl font-medium tracking-tight text-gray-900 mb-1">1.5M+</div>
             </div>
-            <PixelSparkline />
+            <HeatGraphActivity />
           </div>
 
           {/* Card 4: Institutions & Authorities */}

@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {frontmatter.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-mono font-medium text-[#2563eb] bg-blue-50 px-2 py-0.5 rounded-[2px]"
+              className="text-[10px] font-mono font-medium text-[#9e790d] bg-amber-50 px-2 py-0.5 rounded-[2px]"
             >
               {tag}
             </span>

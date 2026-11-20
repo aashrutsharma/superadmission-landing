@@ -72,11 +72,11 @@ export default function ProcessFlowDiagram() {
           <div className="hidden md:block w-16 h-28 relative">
             <svg width="64" height="112" viewBox="0 0 64 112" fill="none" className="w-full h-full">
               {/* Path from Docs */}
-              <path d="M0 18 C32 18, 32 56, 64 56" stroke="#2563eb" strokeWidth="1.5" className="animate-flow" />
+              <path d="M0 18 C32 18, 32 56, 64 56" stroke="#9e790d" strokeWidth="1.5" className="animate-flow" />
               {/* Path from Ranks */}
-              <path d="M0 56 L64 56" stroke="#2563eb" strokeWidth="1.5" className="animate-flow" />
+              <path d="M0 56 L64 56" stroke="#9e790d" strokeWidth="1.5" className="animate-flow" />
               {/* Path from Choices */}
-              <path d="M0 94 C32 94, 32 56, 64 56" stroke="#2563eb" strokeWidth="1.5" className="animate-flow" />
+              <path d="M0 94 C32 94, 32 56, 64 56" stroke="#9e790d" strokeWidth="1.5" className="animate-flow" />
             </svg>
           </div>
 
@@ -87,8 +87,8 @@ export default function ProcessFlowDiagram() {
             </span>
 
             <div className="flex items-center gap-4">
-              {/* Blue Core Block: PraveshAI Core */}
-              <div className="w-14 h-14 bg-[#2563eb] rounded-[4px] flex flex-col items-center justify-center text-white shadow-sm p-1">
+              {/* Gold Core Block: PraveshAI Core */}
+              <div className="w-14 h-14 bg-[#9e790d] rounded-[4px] flex flex-col items-center justify-center text-white shadow-sm p-1">
                 {/* 3x3 Grid Dots */}
                 <div className="grid grid-cols-3 gap-1 mb-1">
                   {Array.from({ length: 9 }).map((_, i) => (
@@ -106,8 +106,8 @@ export default function ProcessFlowDiagram() {
                   RECONCILE
                 </span>
                 <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
-                  <path d="M0 6 H36" stroke="#2563eb" strokeWidth="1.5" className="animate-flow-fast" />
-                  <polygon points="34,3 40,6 34,9" fill="#2563eb" />
+                  <path d="M0 6 H36" stroke="#9e790d" strokeWidth="1.5" className="animate-flow-fast" />
+                  <polygon points="34,3 40,6 34,9" fill="#9e790d" />
                 </svg>
               </div>
 
@@ -124,8 +124,8 @@ export default function ProcessFlowDiagram() {
           {/* CONNECTOR SVG: Flow from Engine to Student Context */}
           <div className="hidden md:block w-16 h-28 relative">
             <svg width="64" height="112" viewBox="0 0 64 112" fill="none" className="w-full h-full">
-              <path d="M0 56 L64 56" stroke="#2563eb" strokeWidth="1.5" className="animate-flow" />
-              <polygon points="58,53 64,56 58,59" fill="#2563eb" />
+              <path d="M0 56 L64 56" stroke="#9e790d" strokeWidth="1.5" className="animate-flow" />
+              <polygon points="58,53 64,56 58,59" fill="#9e790d" />
             </svg>
           </div>
 
@@ -136,7 +136,7 @@ export default function ProcessFlowDiagram() {
             </span>
 
             <div className="flex flex-col items-center justify-center p-3.5 bg-white border border-gray-200/90 rounded-[4px] shadow-2xs w-[140px] text-center">
-              <ShieldCheck className="w-5 h-5 text-[#2563eb] stroke-[1.5] mb-1" />
+              <ShieldCheck className="w-5 h-5 text-[#9e790d] stroke-[1.5] mb-1" />
               <span className="text-[11px] font-mono font-semibold text-gray-900 tracking-wider">
                 STUDENT CONTEXT
               </span>

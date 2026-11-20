@@ -1,0 +1,31 @@
+{
+  "total": 24,
+  "masterSheet": "/images/avatars/gradients/all-avatars.jpg",
+  "avatars": [
+    { "id": 1, "file": "gradient-1.png", "path": "/images/avatars/gradients/gradient-1.png" },
+    { "id": 2, "file": "gradient-2.png", "path": "/images/avatars/gradients/gradient-2.png" },
+    { "id": 3, "file": "gradient-3.png", "path": "/images/avatars/gradients/gradient-3.png" },
+    { "id": 4, "file": "gradient-4.png", "path": "/images/avatars/gradients/gradient-4.png" },
+    { "id": 5, "file": "gradient-5.png", "path": "/images/avatars/gradients/gradient-5.png" },
+    { "id": 6, "file": "gradient-6.png", "path": "/images/avatars/gradients/gradient-6.png" },
+    { "id": 7, "file": "gradient-7.png", "path": "/images/avatars/gradients/gradient-7.png" },
+    { "id": 8, "file": "gradient-8.png", "path": "/images/avatars/gradients/gradient-8.png" },
+    { "id": 9, "file": "gradient-9.png", "path": "/images/avatars/gradients/gradient-9.png" },
+    { "id": 10, "file": "gradient-10.png", "path": "/images/avatars/gradients/gradient-10.png" },
+    { "id": 11, "file": "gradient-11.png", "path": "/images/avatars/gradients/gradient-11.png" },
+    { "id": 12, "file": "gradient-12.png", "path": "/images/avatars/gradients/gradient-12.png" },
+    { "id": 13, "file": "gradient-13.png", "path": "/images/avatars/gradients/gradient-13.png" },
+    { "id": 14, "file": "gradient-14.png", "path": "/images/avatars/gradients/gradient-14.png" },
+    { "id": 15, "file": "gradient-15.png", "path": "/images/avatars/gradients/gradient-15.png" },
+    { "id": 16, "file": "gradient-16.png", "path": "/images/avatars/gradients/gradient-16.png" },
+    { "id": 17, "file": "gradient-17.png", "path": "/images/avatars/gradients/gradient-17.png" },
+    { "id": 18, "file": "gradient-18.png", "path": "/images/avatars/gradients/gradient-18.png" },
+    { "id": 19, "file": "gradient-19.png", "path": "/images/avatars/gradients/gradient-19.png" },
+    { "id": 20, "file": "gradient-20.png", "path": "/images/avatars/gradients/gradient-20.png" },
+    { "id": 21, "file": "gradient-21.png", "path": "/images/avatars/gradients/gradient-21.png" },
+    { "id": 22, "file": "gradient-22.png", "path": "/images/avatars/gradients/gradient-22.png" },
+    { "id": 23, "file": "gradient-23.png", "path": "/images/avatars/gradients/gradient-23.png" },
+    { "id": 24, "file": "gradient-24.png", "path": "/images/avatars/gradients/gradient-24.png" }
+  ]
+}
+

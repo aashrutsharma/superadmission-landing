@@ -12,8 +12,8 @@ interface FeatureCardProps {
 export default function FeatureCard({ icon, title, description, type = "praveshai" }: FeatureCardProps) {
   return (
     <div className="flex items-start gap-4 py-3">
-      {/* Blue Square with Vector Illustration and Crisp 4px Corners */}
-      <div className="w-12 h-12 rounded-[4px] bg-[#2563eb] flex items-center justify-center flex-shrink-0 text-white shadow-2xs">
+      {/* Primary Ochre Square with Vector Illustration and Crisp 4px Corners */}
+      <div className="w-12 h-12 rounded-[4px] bg-[#9e790d] flex items-center justify-center flex-shrink-0 text-white shadow-2xs">
         {icon ? (
           icon
         ) : type === "praveshai" ? (

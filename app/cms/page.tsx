@@ -248,7 +248,7 @@ export default function CMSDashboard() {
             </span>
             <button
               onClick={handleNewPost}
-              className="inline-flex items-center gap-1 bg-[#2563eb] text-white text-xs font-medium px-2.5 py-1 rounded-[3px] hover:bg-blue-700 transition-colors shadow-2xs cursor-pointer"
+              className="inline-flex items-center gap-1 bg-[#9e790d] text-white text-xs font-medium px-2.5 py-1 rounded-[3px] hover:bg-[#85660b] transition-colors shadow-2xs cursor-pointer"
             >
               <Plus className="w-3 h-3" /> Create New
             </button>
@@ -346,7 +346,7 @@ export default function CMSDashboard() {
               <button
                 type="submit"
                 disabled={saving}
-                className="inline-flex items-center gap-1.5 bg-[#2563eb] text-white hover:bg-blue-700 text-xs font-semibold px-3 py-1.5 rounded-[3px] transition-colors shadow-2xs cursor-pointer disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 bg-[#9e790d] text-white hover:bg-[#85660b] text-xs font-semibold px-3 py-1.5 rounded-[3px] transition-colors shadow-2xs cursor-pointer disabled:opacity-50"
               >
                 {saveSuccess ? (
                   <>
@@ -487,7 +487,7 @@ export default function CMSDashboard() {
             <button
               type="submit"
               disabled={saving}
-              className="inline-flex items-center gap-1.5 bg-[#2563eb] text-white hover:bg-blue-700 text-xs font-semibold px-4 py-2 rounded-[3px] transition-colors shadow-2xs cursor-pointer disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 bg-[#9e790d] text-white hover:bg-[#85660b] text-xs font-semibold px-4 py-2 rounded-[3px] transition-colors shadow-2xs cursor-pointer disabled:opacity-50"
             >
               {saveSuccess ? "Saved Live to content/blog/" : saving ? "Saving..." : "Save & Publish Live"}
             </button>
@@ -509,7 +509,7 @@ export default function CMSDashboard() {
                   <h4 className="text-[14px] font-medium text-gray-950">
                     {a.name}
                   </h4>
-                  <p className="text-xs text-[#2563eb] font-mono">{a.role}</p>
+                  <p className="text-xs text-[#9e790d] font-mono">{a.role}</p>
                   <p className="text-xs text-gray-500 mt-1">{a.bio}</p>
                 </div>
                 <span className="text-[11px] font-mono text-gray-400">

@@ -63,7 +63,7 @@ export default function BenchmarkLineChart() {
             </p>
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-gray-900 tracking-tight">₹ 14.20</span>
-              <span className="text-xs font-semibold text-[#2563eb]">78% cheaper</span>
+              <span className="text-xs font-semibold text-[#9e790d]">78% cheaper</span>
             </div>
           </div>
           <div className="border-l border-gray-100 pl-8">
@@ -72,7 +72,7 @@ export default function BenchmarkLineChart() {
             </p>
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-gray-900 tracking-tight">99.8%</span>
-              <span className="text-xs font-semibold text-[#2563eb]">up from 68%</span>
+              <span className="text-xs font-semibold text-[#9e790d]">up from 68%</span>
             </div>
           </div>
         </div>
@@ -119,8 +119,8 @@ export default function BenchmarkLineChart() {
           <span className="text-gray-600 font-medium">Legacy Manual Portals</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#2563eb]" />
-          <span className="text-[#2563eb] font-semibold">Superadmission Protocol</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-[#9e790d]" />
+          <span className="text-[#9e790d] font-semibold">Superadmission Protocol</span>
         </div>
       </div>
 
@@ -166,9 +166,9 @@ export default function BenchmarkLineChart() {
               type="monotone"
               dataKey="superadmission"
               name="Superadmission"
-              stroke="#2563eb"
+              stroke="#9e790d"
               strokeWidth={2}
-              dot={{ r: 3, fill: "#2563eb" }}
+              dot={{ r: 3, fill: "#9e790d" }}
               activeDot={{ r: 5 }}
             />
           </LineChart>

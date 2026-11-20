@@ -106,7 +106,7 @@ export default function ProductPage() {
             <ul className="flex flex-col gap-2 mb-6">
               {section.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-gray-700">
-                  <span className="w-1.5 h-1.5 bg-[#2563eb] rounded-full flex-shrink-0 mt-1.5" />
+                  <span className="w-1.5 h-1.5 bg-[#9e790d] rounded-full flex-shrink-0 mt-1.5" />
                   {feature}
                 </li>
               ))}

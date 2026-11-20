@@ -14,19 +14,14 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-7 mb-12">
         {/* Column 1: Brand */}
         <div className="col-span-2 md:col-span-1">
-          <Link href="/" className="inline-flex items-center gap-2 mb-2.5 no-underline">
-            <div className="w-4 h-4 relative flex-shrink-0">
-              <Image
-                src="/images/Superadmission_Icon_New.png"
-                alt="Superadmission"
-                width={16}
-                height={16}
-                className="object-contain"
-              />
-            </div>
-            <span className="font-medium text-[15px] text-gray-950 tracking-tight">
-              superadmission
-            </span>
+          <Link href="/" className="inline-flex items-center mb-3 no-underline">
+            <Image
+              src="/images/Fairhold Corporation Logo.svg"
+              alt="Fairhold Corporation"
+              width={160}
+              height={30}
+              className="h-[22px] w-auto object-contain opacity-75 hover:opacity-100 transition-opacity"
+            />
           </Link>
           <p className="text-[11px] text-gray-500 leading-relaxed max-w-[200px] mb-3 font-normal">
             The unified digital public infrastructure for Indian academic admissions.

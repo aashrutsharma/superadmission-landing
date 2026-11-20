@@ -117,22 +117,17 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
   };
 
   return (
-    <aside className="w-[260px] min-w-[260px] h-screen sticky top-0 self-start bg-white overflow-y-auto flex flex-col px-7 py-8 select-none shrink-0 z-30">
-      {/* Brand: Golden ball logo + wordmark */}
-      <Link href="/" className="flex items-center gap-2.5 mb-5 no-underline">
-        <div className="w-5 h-5 relative flex-shrink-0">
-          <Image
-            src="/images/Superadmission_Icon_New.png"
-            alt="Superadmission"
-            width={20}
-            height={20}
-            className="rounded-full object-contain"
-            priority
-          />
-        </div>
-        <span className="text-[17px] font-medium text-[#111] tracking-tight">
-          superadmission
-        </span>
+    <aside className="w-[260px] min-w-[260px] h-screen sticky top-0 self-start bg-white overflow-y-auto flex flex-col px-7 pt-10 pb-8 select-none shrink-0 z-30">
+      {/* Brand: Wordmark with elegant top breathing space */}
+      <Link href="/" className="flex items-center mb-6 mt-1 no-underline">
+        <Image
+          src="/images/Superadmission_New Wordmark_Device.svg"
+          alt="Superadmission"
+          width={160}
+          height={24}
+          className="h-[21px] w-auto object-contain"
+          priority
+        />
       </Link>
 
       {/* Segmented Mode Pill: [ For Everyone | Agent ] */}
@@ -182,7 +177,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
               }`}
             >
               {isActive && (
-                <span className="w-1.5 h-1.5 bg-[#2563eb] rounded-[1px] absolute -left-3.5 top-1/2 -translate-y-1/2" />
+                <span className="w-1.5 h-1.5 bg-[#9e790d] rounded-[1px] absolute -left-3.5 top-1/2 -translate-y-1/2" />
               )}
               {link.label}
             </Link>
@@ -201,7 +196,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
               items={tocItems}
               activeIndex={activeSectionIndex}
               onItemClick={handleTocClick}
-              accentColor="#2563eb"
+              accentColor="#9e790d"
               textColor="#71717a"
               markerColor="#e4e4e7"
               showIndex={false}

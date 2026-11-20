@@ -24,7 +24,7 @@ export default function ChangelogPage() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 py-6">
               {/* Version + date column */}
               <div className="flex-shrink-0 sm:w-[110px]">
-                <span className="text-[11px] font-mono font-medium text-[#2563eb] bg-blue-50 px-2 py-0.5 rounded-[2px]">
+                <span className="text-[11px] font-mono font-medium text-[#9e790d] bg-amber-50 px-2 py-0.5 rounded-[2px]">
                   {entry.version}
                 </span>
                 <p className="text-[11px] font-mono text-gray-400 mt-1.5">{entry.date}</p>

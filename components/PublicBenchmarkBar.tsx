@@ -18,7 +18,7 @@ export default function PublicBenchmarkBar() {
           <div key={i} className="flex-1 flex flex-col items-center h-full justify-end">
             <div
               className={`w-full max-w-[48px] rounded-t-sm transition-all relative flex flex-col items-center justify-start pt-2 ${
-                bar.isSuperadmission ? "bg-[#2563eb]" : "bg-[#f1f5f9]"
+                bar.isSuperadmission ? "bg-[#9e790d]" : "bg-[#f1f5f9]"
               }`}
               style={{ height: `${bar.heightPct}%` }}
             >

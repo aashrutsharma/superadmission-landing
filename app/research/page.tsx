@@ -30,7 +30,7 @@ export default function ResearchPage() {
         {/* 3 Metric Cards with crisp 4px corners */}
         <div className="grid grid-cols-1 sm:grid-cols-3 border border-gray-200/90 rounded-[4px] overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-gray-200/90 bg-white shadow-2xs">
           <div className="p-5">
-            <div className="text-3xl font-medium text-[#2563eb] tracking-tight mb-1.5">
+            <div className="text-3xl font-medium text-[#9e790d] tracking-tight mb-1.5">
               99.8%
             </div>
             <h3 className="text-[13px] font-medium text-gray-950 mb-1">
@@ -42,7 +42,7 @@ export default function ResearchPage() {
           </div>
 
           <div className="p-5">
-            <div className="text-3xl font-medium text-[#2563eb] tracking-tight mb-1.5">
+            <div className="text-3xl font-medium text-[#9e790d] tracking-tight mb-1.5">
               #1
             </div>
             <h3 className="text-[13px] font-medium text-gray-950 mb-1">
@@ -54,7 +54,7 @@ export default function ResearchPage() {
           </div>
 
           <div className="p-5">
-            <div className="text-3xl font-medium text-[#2563eb] tracking-tight mb-1.5">
+            <div className="text-3xl font-medium text-[#9e790d] tracking-tight mb-1.5">
               #1
             </div>
             <h3 className="text-[13px] font-medium text-gray-950 mb-1">
@@ -97,7 +97,7 @@ export default function ResearchPage() {
             <thead>
               <tr className="border-b border-gray-200/60 text-gray-400 font-mono text-[11px]">
                 <th className="p-3 pl-4">CATEGORY</th>
-                <th className="p-3 text-[#2563eb] font-semibold">SUPERADMISSION</th>
+                <th className="p-3 text-[#9e790d] font-semibold">SUPERADMISSION</th>
                 <th className="p-3 text-gray-600">STATE NIC ERP</th>
                 <th className="p-3 text-gray-600">LEGACY MANUAL</th>
               </tr>
@@ -105,25 +105,25 @@ export default function ResearchPage() {
             <tbody className="divide-y divide-gray-100 text-gray-800">
               <tr>
                 <td className="p-3 pl-4 font-normal">Single-session choice locking</td>
-                <td className="p-3 text-[#2563eb] font-medium">99.8%</td>
+                <td className="p-3 text-[#9e790d] font-medium">99.8%</td>
                 <td className="p-3 text-gray-600">89.4%</td>
                 <td className="p-3 text-gray-600">74.2%</td>
               </tr>
               <tr>
                 <td className="p-3 pl-4 font-normal">Category / EWS certificate validation</td>
-                <td className="p-3 text-[#2563eb] font-medium">100%</td>
+                <td className="p-3 text-[#9e790d] font-medium">100%</td>
                 <td className="p-3 text-gray-600">82.1%</td>
                 <td className="p-3 text-gray-600">68.5%</td>
               </tr>
               <tr>
                 <td className="p-3 pl-4 font-normal">Multi-round domicile verification</td>
-                <td className="p-3 text-[#2563eb] font-medium">99.4%</td>
+                <td className="p-3 text-[#9e790d] font-medium">99.4%</td>
                 <td className="p-3 text-gray-600">76.2%</td>
                 <td className="p-3 text-gray-600">54.0%</td>
               </tr>
               <tr>
                 <td className="p-3 pl-4 font-normal">Spot vacancy float synchronization</td>
-                <td className="p-3 text-[#2563eb] font-medium">100%</td>
+                <td className="p-3 text-[#9e790d] font-medium">100%</td>
                 <td className="p-3 text-gray-600">68.5%</td>
                 <td className="p-3 text-gray-600">41.2%</td>
               </tr>
