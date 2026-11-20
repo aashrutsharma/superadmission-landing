@@ -117,24 +117,25 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
   };
 
   return (
-    <aside className="w-[260px] min-w-[260px] h-screen sticky top-0 self-start bg-white overflow-y-auto flex flex-col px-7 pt-10 pb-8 select-none shrink-0 z-30">
-      {/* Brand: Wordmark with elegant top breathing space */}
-      <Link href="/" className="flex items-center mb-6 mt-1 no-underline">
+    <aside className="w-[265px] min-w-[265px] h-screen sticky top-0 self-start bg-white overflow-y-auto flex flex-col px-8 pt-9 pb-8 select-none shrink-0 z-30">
+      {/* Brand: Wordmark cleanly left-aligned with subtle breathing space */}
+      <Link href="/" className="inline-flex items-center justify-start self-start mb-6 mt-1 no-underline -ml-1">
         <Image
           src="/images/Superadmission_New Wordmark_Device.svg"
           alt="Superadmission"
-          width={180}
-          height={28}
-          className="h-[25px] w-auto object-contain"
+          width={160}
+          height={24}
+          className="h-[22px] w-auto object-contain object-left"
+          style={{ objectPosition: "left center" }}
           priority
         />
       </Link>
 
       {/* Segmented Mode Pill: [ For Everyone | Agent ] */}
-      <div className="inline-flex items-center p-0.5 bg-[#f4f4f5] border border-gray-200/60 rounded-[4px] w-fit mb-7">
+      <div className="inline-flex items-center p-0.5 bg-[#f4f4f5] border border-gray-200/60 rounded-[4px] w-fit mb-6">
         <button
           onClick={() => setMode("everyone")}
-          className={`px-2.5 py-1 text-xs font-medium rounded-[3px] transition-all cursor-pointer ${
+          className={`px-2.5 py-0.5 text-[11.5px] font-medium rounded-[3px] transition-all cursor-pointer ${
             mode === "everyone"
               ? "bg-white text-gray-900 shadow-2xs"
               : "text-gray-500 hover:text-gray-900 bg-transparent"
@@ -144,7 +145,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
         </button>
         <button
           onClick={() => setMode("agent")}
-          className={`px-2.5 py-1 text-xs font-medium rounded-[3px] transition-all cursor-pointer ${
+          className={`px-2.5 py-0.5 text-[11.5px] font-medium rounded-[3px] transition-all cursor-pointer ${
             mode === "agent"
               ? "bg-white text-gray-900 shadow-2xs"
               : "text-gray-500 hover:text-gray-900 bg-transparent"
@@ -155,7 +156,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
       </div>
 
       {/* Main Nav links */}
-      <nav className="flex flex-col gap-1 mb-6">
+      <nav className="flex flex-col gap-0.5 mb-6">
         {navLinks.map((link) => {
           const isActive = !link.external && (pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href)));
           return link.external ? (
@@ -164,7 +165,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-gray-500 hover:text-gray-900 text-sm py-1 font-normal transition-colors"
+              className="flex items-center text-gray-500 hover:text-gray-900 text-[13px] py-1 font-normal transition-colors leading-normal"
             >
               {link.label}
             </a>
@@ -172,7 +173,7 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
             <Link
               key={link.href}
               href={link.href}
-              className={`flex items-center text-sm py-1 transition-colors relative ${
+              className={`flex items-center text-[13px] py-1 transition-colors relative leading-normal ${
                 isActive ? "text-[#111] font-medium" : "text-gray-500 hover:text-gray-900 font-normal"
               }`}
             >
@@ -187,11 +188,11 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
 
       {/* ON THIS PAGE Section with LineSidebar (active in For Everyone mode) */}
       {tocItems.length > 0 && mode === "everyone" && (
-        <div className="mt-2 pt-5 border-t border-dashed border-gray-200/80">
-          <p className="text-[11px] font-semibold text-gray-400 tracking-wider uppercase mb-3">
+        <div className="mt-1 pt-4 border-t border-dashed border-gray-200/80">
+          <p className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase mb-2.5">
             ON THIS PAGE
           </p>
-          <div className="pl-1">
+          <div className="pl-0.5">
             <LineSidebar
               items={tocItems}
               activeIndex={activeSectionIndex}
@@ -201,12 +202,10 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
               markerColor="#e4e4e7"
               showIndex={false}
               showMarker={true}
-              proximityRadius={75}
-              maxShift={12}
-              markerLength={24}
+              markerLength={22}
               markerGap={6}
-              itemGap={14}
-              fontSize={0.82}
+              itemGap={12}
+              fontSize={0.76}
             />
           </div>
         </div>

@@ -12,8 +12,8 @@ interface FeatureCardProps {
 export default function FeatureCard({ icon, title, description, type = "praveshai" }: FeatureCardProps) {
   return (
     <div className="flex items-start gap-4 py-3">
-      {/* Primary Ochre Square with Vector Illustration and Crisp 4px Corners */}
-      <div className="w-12 h-12 rounded-[4px] bg-[#9e790d] flex items-center justify-center flex-shrink-0 text-white shadow-2xs">
+      {/* Primary Ochre Rounded Square with Vector Illustration */}
+      <div className="w-12 h-12 rounded-[10px] bg-[#9e790d] flex items-center justify-center flex-shrink-0 text-white shadow-2xs">
         {icon ? (
           icon
         ) : type === "praveshai" ? (
@@ -45,10 +45,10 @@ export default function FeatureCard({ icon, title, description, type = "pravesha
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="text-[15px] font-medium text-gray-900 tracking-tight mb-1">
+        <h3 className="text-[15px] font-medium text-gray-950 tracking-tight mb-1">
           {title}
         </h3>
-        <p className="text-[14px] text-gray-600 leading-relaxed font-normal">
+        <p className="text-[13.5px] text-gray-600 leading-relaxed font-normal">
           {description}
         </p>
       </div>
