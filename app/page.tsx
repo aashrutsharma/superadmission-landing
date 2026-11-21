@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import AnnouncementPill from "@/components/AnnouncementPill";
 import FeatureCard from "@/components/FeatureCard";
@@ -15,7 +14,7 @@ import AgentMarkdownView from "@/components/AgentMarkdownView";
 import { FAQ_ITEMS, BLOG_POSTS } from "@/lib/content";
 import { SUPERADMISSION_MDX } from "@/lib/page-mdx";
 import { useViewMode } from "@/lib/view-mode";
-import { ChevronDown, Copy, Check } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -52,120 +51,74 @@ function FAQAccordion() {
 
 export default function Home() {
   const { mode } = useViewMode();
-  const [copied, setCopied] = useState(false);
-
-  const copyPrompt = () => {
-    navigator.clipboard.writeText("npx @superadmission/cli init");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   // If Agent mode is active, display the raw, clean, copiable MDX view (Screenshot 2)
   if (mode === "agent") {
     return <AgentMarkdownView content={SUPERADMISSION_MDX} />;
   }
 
-  // "For Everyone" Rich Interactive View (Screenshot 1)
+  // "For Everyone" Rich Interactive View
   return (
     <div className="w-full">
-      {/* 1. Announcement Pill */}
-      <div className="mb-6">
-        <AnnouncementPill
-          text="Introducing Superadmission"
-          href="https://docs.superadmission.com/superadmission/our-mission-and-vision"
-          linkLabel="Read the post ↗"
-        />
-      </div>
+      {/* Hero Video Banner: Extended from pill height down to Mission */}
+      <div className="w-full rounded-[6px] border border-gray-200/90 relative overflow-hidden mb-10 shadow-sm bg-black">
+        {/* Ambient Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-85"
+        >
+          <source src="/videos/bg_superadmission.webm" type="video/webm" />
+        </video>
 
-      {/* 2. Hero Headline (Font-Medium, Not Bold, exactly like Screenshot 1) */}
-      <div className="mb-7">
-        <h1 className="text-[36px] sm:text-[38px] font-medium tracking-tight text-[#0a0a0a] leading-[1.18] mb-3.5">
-          superadmission is building the default engine for unified academic admissions.
-        </h1>
-        <p className="text-[14px] text-gray-600 leading-relaxed mb-5 font-normal">
-          Available for students, institutions, and counselling authorities.
-        </p>
+        {/* Ambient Dark Gradient Overlay for Contrast & Readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/35 pointer-events-none" />
 
-        {/* CTA Buttons (Crisp 3px corners) */}
-        <div className="flex items-center gap-2.5 flex-wrap mb-3.5">
-          <a
-            href="https://superadmission.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#9e790d] text-white hover:bg-[#85660b] text-xs font-semibold px-3.5 py-2 rounded-[3px] transition-colors no-underline uppercase tracking-wider shadow-2xs"
-          >
-            <div className="w-3.5 h-3.5 relative">
-              <Image
-                src="/images/Superadmission_Icon_New.png"
-                alt="Superadmission"
-                width={14}
-                height={14}
-                className="object-contain"
-              />
-            </div>
-            BUILD WITH SUPERADMISSION
-          </a>
-          <a
-            href="mailto:contact@superadmission.com"
-            className="inline-flex items-center gap-1.5 bg-[#f4f4f5] hover:bg-gray-200 text-gray-800 text-xs font-semibold px-3.5 py-2 rounded-[3px] transition-colors no-underline uppercase tracking-wider"
-          >
-            TALK TO SALES ↗
-          </a>
-        </div>
-
-        {/* Quick CLI Box with Copy */}
-        <div className="flex items-center justify-between border border-gray-200/90 rounded-[3px] px-3 py-1.5 bg-gray-50/50 max-w-sm mb-6">
-          <span className="text-[11px] font-mono text-gray-500 uppercase tracking-wider">
-            COPY SETUP PROMPT
-          </span>
-          <button
-            onClick={copyPrompt}
-            className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-900 transition-colors bg-transparent border-none cursor-pointer"
-          >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-            <span className="text-[11px] font-mono">{copied ? "Copied" : "Copy"}</span>
-          </button>
-        </div>
-
-        {/* Works With Logos */}
-        <div className="flex items-center gap-3 flex-wrap">
-          <span className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider">
-            WORKS WITH
-          </span>
-          <div className="flex items-center gap-2 flex-wrap">
-            {["DigiLocker", "Aadhaar", "APAAR", "NTA", "Digital India", "MeitY"].map(
-              (partner) => (
-                <span
-                  key={partner}
-                  className="text-[11px] text-gray-600 border border-gray-200/80 rounded-full px-2.5 py-0.5 bg-white font-medium shadow-2xs"
-                >
-                  {partner}
-                </span>
-              )
-            )}
+        {/* Hero Content overlaid on Video */}
+        <div className="relative z-10 p-7 sm:p-9 flex flex-col justify-between min-h-[420px] sm:min-h-[460px]">
+          {/* Top: Announcement Pill */}
+          <div className="w-fit">
+            <AnnouncementPill
+              variant="glass"
+              text="Introducing Superadmission"
+              href="https://docs.superadmission.com/superadmission/our-mission-and-vision"
+              linkLabel="Read the post ↗"
+            />
           </div>
-        </div>
-      </div>
 
-      {/* Hero Visual / Atmospheric Banner (Crisp 4px corners) */}
-      <div className="w-full h-64 rounded-[4px] bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 flex flex-col items-center justify-center p-6 mb-10 border border-gray-200 relative overflow-hidden text-center shadow-inner">
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: "radial-gradient(#60a5fa 1px, transparent 1px)",
-            backgroundSize: "20px 20px",
-          }}
-        />
-        <div className="relative z-10">
-          <span className="text-[10px] font-mono font-medium text-blue-300 uppercase tracking-widest bg-blue-950/70 border border-blue-400/30 px-2.5 py-0.5 rounded-[2px] mb-2 inline-block">
-            DPI PROTOCOL LAYER
-          </span>
-          <h2 className="text-lg md:text-xl font-medium text-white tracking-tight mt-1 mb-1.5">
-            Superadmission Architecture
-          </h2>
-          <p className="text-[11px] text-blue-200/70 max-w-xs mx-auto">
-            [Banner Placeholder &mdash; Image will be added here]
-          </p>
+          {/* Bottom: Heading, Subtitle & Founders CTA */}
+          <div className="mt-auto pt-10">
+            <h1 className="text-[30px] sm:text-[34px] md:text-[36px] font-medium tracking-tight text-white leading-[1.2] mb-3 max-w-xl">
+              Building Digital Public Infrastructure for the world&apos;s largest admissions ecosystem.
+            </h1>
+            <p className="text-[14px] text-white/80 leading-relaxed mb-6 font-normal max-w-lg">
+              Available for students, institutions, and counselling authorities.
+            </p>
+
+            {/* CTA: Talk to Founders + Email text */}
+            <div className="flex items-center gap-3.5 flex-wrap">
+              <a
+                href="https://cal.com/superadmission"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-[#9e790d] hover:bg-[#85660b] text-white text-xs font-semibold px-4 py-2.5 rounded-[3px] transition-colors no-underline uppercase tracking-wider shadow-sm cursor-pointer"
+              >
+                TALK TO FOUNDERS ↗
+              </a>
+              <span className="text-xs text-white/75 font-normal">
+                or write us at{" "}
+                <a
+                  href="mailto:office@superadmission.com"
+                  className="text-white underline underline-offset-2 hover:text-amber-200 font-medium transition-colors"
+                >
+                  office@superadmission.com
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
