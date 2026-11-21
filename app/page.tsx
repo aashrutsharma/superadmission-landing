@@ -61,21 +61,21 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Video Banner: Extended from pill height down to Mission */}
-      <div className="w-full rounded-[6px] border border-gray-200/90 relative overflow-hidden mb-10 shadow-sm bg-black">
-        {/* Ambient Video Background */}
+      <div className="w-full rounded-[6px] border border-gray-200/90 relative overflow-hidden mb-10 shadow-sm bg-neutral-950">
+        {/* Natural Video Background (True colors & vibrancy) */}
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-85"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         >
           <source src="/videos/bg_superadmission.webm" type="video/webm" />
         </video>
 
-        {/* Ambient Dark Gradient Overlay for Contrast & Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/35 pointer-events-none" />
+        {/* Minimal Natural Scrim to protect text while preserving the video's authentic look */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent pointer-events-none" />
 
         {/* Hero Content overlaid on Video */}
         <div className="relative z-10 p-7 sm:p-9 flex flex-col justify-between min-h-[420px] sm:min-h-[460px]">
@@ -91,28 +91,28 @@ export default function Home() {
 
           {/* Bottom: Heading, Subtitle & Founders CTA */}
           <div className="mt-auto pt-10">
-            <h1 className="text-[30px] sm:text-[34px] md:text-[36px] font-medium tracking-tight text-white leading-[1.2] mb-3 max-w-xl">
+            <h1 className="text-[30px] sm:text-[34px] md:text-[36px] font-medium tracking-tight text-white leading-[1.2] mb-3 max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
               Building Digital Public Infrastructure for the world&apos;s largest admissions ecosystem.
             </h1>
-            <p className="text-[14px] text-white/80 leading-relaxed mb-6 font-normal max-w-lg">
+            <p className="text-[14px] text-white/90 leading-relaxed mb-6 font-normal max-w-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)]">
               Available for students, institutions, and counselling authorities.
             </p>
 
-            {/* CTA: Talk to Founders + Email text */}
+            {/* CTA: Crisp White Talk to Founders Button + Email text */}
             <div className="flex items-center gap-3.5 flex-wrap">
               <a
                 href="https://cal.com/superadmission"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[#9e790d] hover:bg-[#85660b] text-white text-xs font-semibold px-4 py-2.5 rounded-[3px] transition-colors no-underline uppercase tracking-wider shadow-sm cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0a0a0a] text-xs font-semibold px-4 py-2.5 rounded-[3px] transition-all no-underline uppercase tracking-wider shadow-md hover:shadow-lg cursor-pointer"
               >
                 TALK TO FOUNDERS ↗
               </a>
-              <span className="text-xs text-white/75 font-normal">
+              <span className="text-xs text-white/90 font-normal drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)]">
                 or write us at{" "}
                 <a
                   href="mailto:office@superadmission.com"
-                  className="text-white underline underline-offset-2 hover:text-amber-200 font-medium transition-colors"
+                  className="text-white underline underline-offset-2 hover:text-white/80 font-medium transition-colors"
                 >
                   office@superadmission.com
                 </a>
