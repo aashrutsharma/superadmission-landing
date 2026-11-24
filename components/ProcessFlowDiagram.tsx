@@ -39,31 +39,31 @@ export default function ProcessFlowDiagram() {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
           {/* LEFT COLUMN: RAW DATA SOURCES */}
           <div className="flex flex-col items-center md:items-start gap-3 w-full md:w-auto">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase">
-              RAW DATA
+            <span className="text-[11px] text-gray-500 font-normal">
+              Raw data
             </span>
 
             {/* Source Node 1: Documents */}
             <div className="flex items-center gap-2.5 px-3 py-2 bg-white border border-gray-200/90 rounded-[4px] shadow-2xs w-[130px]">
               <FileText className="w-4 h-4 text-gray-700 stroke-[1.5]" />
-              <span className="text-[11px] font-mono font-medium text-gray-800 tracking-wider">
-                DOCS / APAAR
+              <span className="text-[12px] font-medium text-gray-800">
+                Docs / APAAR
               </span>
             </div>
 
             {/* Source Node 2: Ranks */}
             <div className="flex items-center gap-2.5 px-3 py-2 bg-white border border-gray-200/90 rounded-[4px] shadow-2xs w-[130px]">
               <Award className="w-4 h-4 text-gray-700 stroke-[1.5]" />
-              <span className="text-[11px] font-mono font-medium text-gray-800 tracking-wider">
-                RANKS / CET
+              <span className="text-[12px] font-medium text-gray-800">
+                Ranks / CET
               </span>
             </div>
 
             {/* Source Node 3: Choices */}
             <div className="flex items-center gap-2.5 px-3 py-2 bg-white border border-gray-200/90 rounded-[4px] shadow-2xs w-[130px]">
               <Layers className="w-4 h-4 text-gray-700 stroke-[1.5]" />
-              <span className="text-[11px] font-mono font-medium text-gray-800 tracking-wider">
-                CHOICES
+              <span className="text-[12px] font-medium text-gray-800">
+                Choices
               </span>
             </div>
           </div>
@@ -82,8 +82,8 @@ export default function ProcessFlowDiagram() {
 
           {/* CENTER BOX: SUPERADMISSION ENGINE */}
           <div className="border border-dashed border-gray-300 rounded-[4px] p-4 bg-gray-50/60 flex flex-col items-center relative w-full md:w-auto">
-            <span className="text-[9px] font-mono tracking-widest text-gray-400 uppercase mb-3 self-start">
-              SUPERADMISSION PROTOCOL
+            <span className="text-[11px] text-gray-500 font-normal mb-3 self-start">
+              Superadmission Protocol
             </span>
 
             <div className="flex items-center gap-4">
@@ -95,15 +95,15 @@ export default function ProcessFlowDiagram() {
                     <span key={i} className="w-1 h-1 bg-white rounded-full opacity-90" />
                   ))}
                 </div>
-                <span className="text-[8px] font-mono font-semibold tracking-wider text-white">
-                  PRAVESH-1
+                <span className="text-[9px] font-semibold text-white">
+                  Pravesh-1
                 </span>
               </div>
 
               {/* Internal Flow Arrow */}
               <div className="flex flex-col items-center">
-                <span className="text-[8px] font-mono text-gray-400 mb-0.5 tracking-wider">
-                  RECONCILE
+                <span className="text-[9px] text-gray-500 mb-0.5">
+                  Reconcile
                 </span>
                 <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
                   <path d="M0 6 H36" stroke="#9e790d" strokeWidth="1.5" className="animate-flow-fast" />
@@ -114,8 +114,8 @@ export default function ProcessFlowDiagram() {
               {/* Database Node: Seat Matrix V26 */}
               <div className="flex flex-col items-center justify-center w-14 h-14 bg-white border border-gray-200 rounded-[4px] p-1 shadow-2xs">
                 <Database className="w-4 h-4 text-gray-700 stroke-[1.5] mb-1" />
-                <span className="text-[8px] font-mono font-medium text-gray-700 tracking-tight">
-                  SEAT DB V26
+                <span className="text-[9px] font-medium text-gray-700">
+                  Seat DB v26
                 </span>
               </div>
             </div>
@@ -131,17 +131,17 @@ export default function ProcessFlowDiagram() {
 
           {/* RIGHT COLUMN: RECONCILED ALLOCATION CONTEXT */}
           <div className="flex flex-col items-center md:items-start gap-2.5 w-full md:w-auto">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase">
-              ALLOCATE VIA PROTOCOL
+            <span className="text-[11px] text-gray-500 font-normal">
+              Allocate via protocol
             </span>
 
             <div className="flex flex-col items-center justify-center p-3.5 bg-white border border-gray-200/90 rounded-[4px] shadow-2xs w-[140px] text-center">
               <ShieldCheck className="w-5 h-5 text-[#9e790d] stroke-[1.5] mb-1" />
-              <span className="text-[11px] font-mono font-semibold text-gray-900 tracking-wider">
-                STUDENT CONTEXT
+              <span className="text-[12px] font-semibold text-gray-950">
+                Student Context
               </span>
-              <span className="text-[9px] text-emerald-600 font-mono mt-0.5 flex items-center gap-1">
-                <CheckCircle2 className="w-2.5 h-2.5" /> VERIFIED SEAT
+              <span className="text-[10px] text-emerald-600 mt-0.5 flex items-center gap-1">
+                <CheckCircle2 className="w-2.5 h-2.5" /> Verified seat
               </span>
             </div>
 

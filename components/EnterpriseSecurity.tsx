@@ -19,20 +19,20 @@ export default function EnterpriseSecurity() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-5">
         <div className="border border-gray-200/90 rounded-[4px] p-4 bg-white flex flex-col items-center justify-center text-center h-[110px] shadow-2xs">
           <ShieldCheck className="w-7 h-7 text-[#9e790d] mb-2 stroke-[1.5]" />
-          <span className="text-[11px] font-semibold text-gray-900 tracking-wider uppercase">DPDP ACT 2023</span>
-          <span className="text-[9px] font-mono text-gray-400">COMPLIANT</span>
+          <span className="text-[12px] font-medium text-gray-950">DPDP Act 2023</span>
+          <span className="text-[11px] text-gray-500">Compliant</span>
         </div>
 
         <div className="border border-gray-200/90 rounded-[4px] p-4 bg-white flex flex-col items-center justify-center text-center h-[110px] shadow-2xs">
           <Award className="w-7 h-7 text-gray-800 mb-2 stroke-[1.5]" />
-          <span className="text-[11px] font-semibold text-gray-900 tracking-wider uppercase">ISO 27001</span>
-          <span className="text-[9px] font-mono text-gray-400">CERTIFIED SYSTEM</span>
+          <span className="text-[12px] font-medium text-gray-950">ISO 27001</span>
+          <span className="text-[11px] text-gray-500">Certified System</span>
         </div>
 
         <div className="border border-gray-200/90 rounded-[4px] p-4 bg-white flex flex-col items-center justify-center text-center h-[110px] shadow-2xs">
           <Lock className="w-7 h-7 text-[#9e790d] mb-2 stroke-[1.5]" />
-          <span className="text-[11px] font-semibold text-gray-900 tracking-wider uppercase">INDIA STACK</span>
-          <span className="text-[9px] font-mono text-gray-400">APAAR / DIGILOCKER</span>
+          <span className="text-[12px] font-medium text-gray-950">India Stack</span>
+          <span className="text-[11px] text-gray-500">APAAR / DigiLocker</span>
         </div>
       </div>
 

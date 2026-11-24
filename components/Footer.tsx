@@ -27,8 +27,8 @@ export default function Footer() {
           <p className="text-[11px] text-gray-500 leading-relaxed mb-3 font-normal">
             The unified digital public infrastructure for Indian academic admissions.
           </p>
-          <span className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase">
-            NEW DELHI
+          <span className="text-xs text-gray-400 font-normal">
+            New Delhi
           </span>
         </div>
 
@@ -36,8 +36,8 @@ export default function Footer() {
         <div className="grid grid-cols-3 gap-8 sm:gap-12 md:gap-14 flex-1 max-w-[420px]">
           {/* Column 1: PRODUCT */}
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase mb-0.5">
-              PRODUCT
+            <span className="text-xs font-medium text-gray-400 mb-1">
+              Product
             </span>
             <Link href="/product" className="text-xs text-gray-600 hover:text-gray-900 transition-colors no-underline">
               Product
@@ -71,8 +71,8 @@ export default function Footer() {
 
           {/* Column 2: COMPANY */}
           <div className="flex flex-col gap-2">
-            <span className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase mb-0.5">
-              COMPANY
+            <span className="text-xs font-medium text-gray-400 mb-1">
+              Company
             </span>
             <Link href="/product" className="text-xs text-gray-600 hover:text-gray-900 transition-colors no-underline">
               About
@@ -102,8 +102,8 @@ export default function Footer() {
 
           {/* Column 3: FOLLOW US ON */}
           <div className="flex flex-col gap-2.5">
-            <span className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase mb-0.5">
-              FOLLOW US ON
+            <span className="text-xs font-medium text-gray-400 mb-1">
+              Follow us on
             </span>
             <a
               href="https://x.com"

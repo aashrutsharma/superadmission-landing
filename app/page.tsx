@@ -104,9 +104,9 @@ export default function Home() {
                 href="https://cal.com/superadmission"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0a0a0a] text-xs font-semibold px-4 py-2.5 rounded-[3px] transition-all no-underline uppercase tracking-wider shadow-md hover:shadow-lg cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0a0a0a] text-xs font-semibold px-4 py-2 rounded-[4px] transition-all no-underline shadow-sm hover:shadow cursor-pointer"
               >
-                TALK TO FOUNDERS ↗
+                Talk to Founders ↗
               </a>
               <span className="text-xs text-white/90 font-normal drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)]">
                 or write us at{" "}
@@ -194,8 +194,8 @@ export default function Home() {
 
       {/* SECTION 3: IN PRODUCTION */}
       <section id="in-production" className="mb-14 scroll-mt-20">
-        <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
-          IN PRODUCTION
+        <p className="text-[12px] font-normal text-gray-500 mb-2">
+          In production
         </p>
         <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-950 leading-tight mb-7">
           Our <span className="font-semibold text-gray-950">promise</span> is the most reliable admissions infrastructure for India: the kind students <span className="font-semibold text-gray-950">feel</span>, not just the kind that tops a benchmark.

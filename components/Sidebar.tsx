@@ -189,8 +189,8 @@ export default function Sidebar({ tocItems: customTocItems }: SidebarProps = {})
       {/* ON THIS PAGE Section with LineSidebar (active in For Everyone mode) */}
       {tocItems.length > 0 && mode === "everyone" && (
         <div className="mt-1 pt-4 border-t border-dashed border-gray-200/80">
-          <p className="text-[10px] font-mono font-medium text-gray-400 tracking-wider uppercase mb-2.5">
-            ON THIS PAGE
+          <p className="text-[11.5px] font-normal text-gray-400 mb-2">
+            On this page
           </p>
           <div className="pl-0.5">
             <LineSidebar

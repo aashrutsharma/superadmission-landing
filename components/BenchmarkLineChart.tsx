@@ -58,8 +58,8 @@ export default function BenchmarkLineChart() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-8">
           <div>
-            <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">
-              COST PER ALLOCATION
+            <p className="text-[12px] font-normal text-gray-500 mb-1">
+              Cost per allocation
             </p>
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-gray-900 tracking-tight">₹ 14.20</span>
@@ -67,8 +67,8 @@ export default function BenchmarkLineChart() {
             </div>
           </div>
           <div className="border-l border-gray-100 pl-8">
-            <p className="text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">
-              ROUNDS COMPLETED ON TIME
+            <p className="text-[12px] font-normal text-gray-500 mb-1">
+              Rounds completed on time
             </p>
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-gray-900 tracking-tight">99.8%</span>

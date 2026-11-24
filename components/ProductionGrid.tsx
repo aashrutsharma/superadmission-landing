@@ -14,38 +14,38 @@ export default function ProductionGrid() {
         <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white flex flex-col justify-between shadow-2xs">
           <div>
             <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Allocation latency</h3>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider mt-0.5 mb-5">
-              PER CANDIDATE, ON PRODUCTION TRAFFIC
+            <p className="text-[12px] text-gray-500 font-normal mt-0.5 mb-4">
+              Per candidate, on production traffic
             </p>
 
-            <div className="grid grid-cols-3 gap-2 text-xs text-gray-400 font-mono mb-2">
+            <div className="grid grid-cols-3 gap-2 text-xs text-gray-400 mb-2">
               <span></span>
-              <span className="text-right">SERVER</span>
-              <span className="text-right">END TO END</span>
+              <span className="text-right">Server</span>
+              <span className="text-right">End to end</span>
             </div>
 
             <div className="space-y-3">
               <div className="grid grid-cols-3 items-baseline gap-2">
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">ELIGIBILITY</span>
+                <span className="text-xs text-gray-600 font-medium">Eligibility</span>
                 <div className="text-right">
                   <span className="text-2xl font-normal text-gray-900 tracking-tight">142</span>
-                  <span className="text-xs text-gray-400 ml-0.5 font-mono">ms</span>
+                  <span className="text-xs text-gray-400 ml-0.5">ms</span>
                 </div>
                 <div className="text-right">
                   <span className="text-2xl font-normal text-gray-900 tracking-tight">280</span>
-                  <span className="text-xs text-gray-400 ml-0.5 font-mono">ms</span>
+                  <span className="text-xs text-gray-400 ml-0.5">ms</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-3 items-baseline gap-2">
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">ALLOCATION</span>
+                <span className="text-xs text-gray-600 font-medium">Allocation</span>
                 <div className="text-right">
                   <span className="text-2xl font-normal text-gray-900 tracking-tight">118</span>
-                  <span className="text-xs text-gray-400 ml-0.5 font-mono">ms</span>
+                  <span className="text-xs text-gray-400 ml-0.5">ms</span>
                 </div>
                 <div className="text-right">
                   <span className="text-2xl font-normal text-gray-900 tracking-tight">195</span>
-                  <span className="text-xs text-gray-400 ml-0.5 font-mono">ms</span>
+                  <span className="text-xs text-gray-400 ml-0.5">ms</span>
                 </div>
               </div>
             </div>
@@ -56,8 +56,8 @@ export default function ProductionGrid() {
         <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white flex flex-col justify-between shadow-2xs">
           <div>
             <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Independent benchmarks</h3>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider mt-0.5 mb-3.5">
-              NATIONAL ADMISSIONS AUDIT, 2026
+            <p className="text-[12px] text-gray-500 font-normal mt-0.5 mb-3.5">
+              National Admissions Audit, 2026
             </p>
             <p className="text-[13px] text-gray-700 leading-relaxed font-normal">
               &ldquo;Superadmission <mark className="bg-amber-100/80 text-[#9e790d] px-1 py-0.5 rounded-[2px] font-medium">performs best overall</mark>, achieving round reconciliation completion rate of 99.82% and the lowest vacancy discrepancy rate of 0.08%.&rdquo;
@@ -82,8 +82,8 @@ export default function ProductionGrid() {
           <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white flex flex-col justify-between shadow-2xs">
             <div>
               <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Applications processed</h3>
-              <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider mt-0.5 mb-2.5">
-                PER ADMISSION SEASON
+              <p className="text-[12px] text-gray-500 font-normal mt-0.5 mb-2.5">
+                Per admission season
               </p>
               <div className="text-3xl font-medium tracking-tight text-gray-900 mb-1">1.5M+</div>
             </div>
@@ -93,8 +93,8 @@ export default function ProductionGrid() {
           {/* Card 4: Institutions & Authorities */}
           <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white shadow-2xs">
             <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Institutions & Authorities</h3>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider mt-0.5 mb-2.5">
-              ACROSS 28 STATES & UNION TERRITORIES
+            <p className="text-[12px] text-gray-500 font-normal mt-0.5 mb-2.5">
+              Across 28 states & union territories
             </p>
             <div className="text-3xl font-medium tracking-tight text-gray-900">1,200+</div>
           </div>
@@ -104,8 +104,8 @@ export default function ProductionGrid() {
         <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white flex flex-col justify-between shadow-2xs">
           <div>
             <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Public benchmarks</h3>
-            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider mt-0.5 mb-2.5">
-              STATE OF THE ART ON JOINT SEAT ALLOCATION
+            <p className="text-[12px] text-gray-500 font-normal mt-0.5 mb-2.5">
+              State of the art on joint seat allocation
             </p>
             <div className="text-3xl font-medium tracking-tight text-gray-900 mb-3">#1</div>
             <PublicBenchmarkBar />
