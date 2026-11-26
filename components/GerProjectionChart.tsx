@@ -147,7 +147,16 @@ export default function GerProjectionChart() {
 
       {/* Footnote in very small font */}
       <p className="text-[10px] text-gray-400 mt-2 font-normal leading-normal">
-        A CII and Grant Thornton report cited in <em>The Tribune</em> estimates India will need capacity for about 8.61 crore students by 2035.
+        A CII and Grant Thornton report quoted in <em>The Tribune</em> puts the 2035 need at about 8.61 crore.{" "}
+        <a
+          href="https://www.grantthornton.in/insights/thought-leadership/empowering-future-ready-higher-education-institutions/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#9e790d] hover:underline inline-flex items-center gap-0.5 no-underline ml-0.5 font-medium"
+        >
+          <span>Report</span>
+          <span className="text-[11px]">↗</span>
+        </a>
       </p>
     </div>
   );
