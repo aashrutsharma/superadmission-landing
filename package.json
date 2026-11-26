@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/mdx": "^16.4.6",
+    "echarts": "^6.1.0",
     "framer-motion": "^14.14.0",
     "gray-matter": "^4.0.3",
     "heat-graph": "^0.0.26",

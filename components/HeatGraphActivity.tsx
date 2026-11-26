@@ -61,10 +61,10 @@ export default function HeatGraphActivity() {
         }
         .heat-illusion-container {
           transform-origin: left center;
-          animation: subtleHeatGrowth 6.5s ease-in-out infinite;
+          animation: subtleHeatGrowth 3.8s ease-in-out infinite;
         }
         .leading-edge-pulse {
-          animation: pulseLeadingEdge 2.8s ease-in-out infinite;
+          animation: pulseLeadingEdge 1.6s ease-in-out infinite;
         }
       `}</style>
 
@@ -84,7 +84,7 @@ export default function HeatGraphActivity() {
 
               return (
                 <HeatGraph.Cell
-                  className={`w-full aspect-square rounded-[2px] transition-all duration-300 ${
+                  className={`w-full aspect-square rounded-[0.5px] transition-all duration-300 ${
                     isLeading && isFilled ? "leading-edge-pulse" : ""
                   }`}
                   style={{

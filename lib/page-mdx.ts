@@ -45,13 +45,13 @@ India’s higher education ecosystem serves over 4.5 crore students across a dis
 * **Repetitive Forms Across Scattered Portals**
   The admission journey is split across multiple portals, forcing fresh high school graduates into exhausting, repetitive data entry and document uploads.
 
-Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants. If today’s fragmented systems already struggle under current demand, how will they withstand twice the load? That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
+Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants. **If today’s fragmented systems already struggle under current demand, how will they withstand twice the load?** That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
 
 [Read more about the specifics](https://docs.superadmission.com/superadmission/what-is-superadmission)
 
 ## What are we building?
 
-The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a single sign-on linked with Aadhaar or APAAR ID that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
+The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a single sign-on linked with Aadhaar or APAAR that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
 
 [see our Product Page →](/product)
 

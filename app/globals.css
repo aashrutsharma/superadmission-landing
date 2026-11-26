@@ -34,6 +34,15 @@ strong, b {
   font-weight: 600;
 }
 
+@keyframes metallicShine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

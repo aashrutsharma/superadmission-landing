@@ -15,6 +15,9 @@ import { FAQ_ITEMS, BLOG_POSTS } from "@/lib/content";
 import { SUPERADMISSION_MDX } from "@/lib/page-mdx";
 import { useViewMode } from "@/lib/view-mode";
 import { ChevronDown } from "lucide-react";
+import { PiGlobeSimple, PiKey } from "react-icons/pi";
+import AadhaarIcon from "@/components/AadhaarIcon";
+import ApaarLogo from "@/components/ApaarLogo";
 
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -169,7 +172,9 @@ export default function Home() {
           What real problem is this even solving ?
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed mb-6 font-normal">
-          India’s higher education ecosystem serves over 4.5 crore students across a disorganised network of authorities, institutions, and portals. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
+          India’s higher education ecosystem serves over 4.5 crore students across a disorganised{" "}
+          <PiGlobeSimple className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] mx-0.5 text-current" />
+          network of authorities, institutions, and portals. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
         </p>
         <div className="flex flex-col gap-1.5">
           <FeatureCard
@@ -200,7 +205,11 @@ export default function Home() {
         </div>
 
         <p className="text-[14px] text-gray-700 mt-6 leading-relaxed font-normal">
-          Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants. If today’s fragmented systems already struggle under current demand, how will they withstand twice the load? That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
+          Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants.{" "}
+          <span className="text-gray-950 font-medium">
+            If today’s fragmented systems already struggle under current demand, how will they withstand twice the load?
+          </span>{" "}
+          That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
         </p>
 
         <div className="mt-4">
@@ -218,7 +227,13 @@ export default function Home() {
           What are we building?
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed mb-4 font-normal">
-          The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a single sign-on linked with Aadhaar or APAAR ID that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
+          The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a{" "}
+          <PiKey className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] mx-0.5 text-current" />
+          {" "}single sign-on linked with{" "}
+          <AadhaarIcon />
+          {" "}Aadhaar or{" "}
+          <ApaarLogo />
+          {" "}that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
         </p>
 
         <div className="mb-6">
@@ -238,11 +253,12 @@ export default function Home() {
 
       {/* SECTION 3: IN PRODUCTION */}
       <section id="in-production" className="mb-14 scroll-mt-20">
-        <p className="text-[12px] font-normal text-gray-500 mb-2">
-          In production
-        </p>
         <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-950 leading-tight mb-7">
-          Our aim is a world-class admission infrastructure for India.
+          Our aim is a{" "}
+          <span className="font-bold relative inline-block bg-[linear-gradient(110deg,#111111_35%,#9e790d_48%,#fef08a_51%,#9e790d_54%,#111111_65%)] bg-[length:250%_100%] bg-clip-text text-transparent animate-[metallicShine_5s_linear_infinite]">
+            world-class
+          </span>{" "}
+          admission infrastructure for India.
         </h2>
 
         {/* Real Production Cards & Real Recharts Graphs (Screenshot 3) */}

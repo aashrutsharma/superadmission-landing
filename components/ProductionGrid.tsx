@@ -4,52 +4,62 @@ import Link from "next/link";
 import HeatGraphActivity from "./HeatGraphActivity";
 import PublicBenchmarkBar from "./PublicBenchmarkBar";
 import BenchmarkLineChart from "./BenchmarkLineChart";
+import SuperadmissionWordmark from "./SuperadmissionWordmark";
 
 export default function ProductionGrid() {
   return (
     <div className="flex flex-col gap-3.5 w-full">
       {/* Top 2 Cards: Latency & Independent Benchmarks */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-3.5">
-        {/* Card A: Today vs One day (Expanded to 8 cols so Superadmission column & DigiLocker never cut off) */}
+        {/* Card A: Today vs One day */}
         <div className="md:col-span-8 border border-gray-200/90 rounded-[4px] p-5 bg-white flex flex-col justify-between shadow-2xs">
           <div>
             <h3 className="text-[14px] font-medium text-gray-900 tracking-tight">Today vs One day</h3>
-            <p className="text-[11px] font-mono text-gray-400 mt-0.5 mb-3.5 uppercase tracking-wider">
-              PER CANDIDATE, ACROSS ONE ADMISSION CYCLE
+            <p className="text-[11px] font-mono text-gray-400 mt-0.5 mb-3 tracking-wider">
+              Per applicant / admission cycle
             </p>
 
-            <div className="border border-gray-100 rounded-[4px] bg-gray-50/40 divide-y divide-gray-100 text-xs">
-              {/* Table Header */}
-              <div className="grid grid-cols-12 gap-2 px-3.5 py-2 bg-gray-100/60 font-mono text-[10px] sm:text-[10.5px] text-gray-500 uppercase tracking-normal sm:tracking-wider">
-                <span className="col-span-4 font-medium">Metric</span>
-                <span className="col-span-2 text-center sm:text-right font-medium">Today</span>
-                <span className="col-span-6 text-right font-semibold text-[#9e790d]">
-                  Superadmission
-                </span>
-              </div>
-
-              {/* Row 1 */}
-              <div className="grid grid-cols-12 gap-2 px-3.5 py-2.5 items-center bg-white">
-                <span className="col-span-4 text-gray-700 font-medium leading-tight">Platforms used</span>
-                <span className="col-span-2 text-center sm:text-right font-mono text-sm text-gray-600">4–6</span>
-                <div className="col-span-6 text-right">
-                  <span className="inline-flex items-center justify-center font-mono font-bold text-xs bg-amber-50 text-[#9e790d] border border-amber-200/80 px-2 py-0.5 rounded-[3px]">
-                    1
-                  </span>
-                </div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="grid grid-cols-12 gap-2 px-3.5 py-2.5 items-center bg-white">
-                <span className="col-span-4 text-gray-700 font-medium leading-tight">Document Uploads</span>
-                <span className="col-span-2 text-center sm:text-right font-mono text-xs text-gray-600">4–6 times</span>
-                <div className="col-span-6 text-right leading-tight">
-                  <span className="inline-block text-[11px] font-medium text-[#9e790d] bg-amber-50/70 border border-amber-200/70 px-2.5 py-1 rounded-[3px] text-right">
-                    Fetched once <br />
-                    from DigiLocker
-                  </span>
-                </div>
-              </div>
+            {/* Clean shadcn-style separator table */}
+            <div className="w-full overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-gray-100">
+                    <th className="py-2.5 px-0 font-mono text-[11px] font-medium text-gray-400 tracking-wider">
+                      Parameter
+                    </th>
+                    <th className="py-2.5 px-3 text-center sm:text-right font-mono text-[11px] font-medium text-gray-400 tracking-wider">
+                      Today
+                    </th>
+                    <th className="py-2.5 px-0 text-right">
+                      <SuperadmissionWordmark className="h-[12px] w-auto ml-auto text-[#9e790d] inline-block align-middle" />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  <tr className="transition-colors hover:bg-gray-50/40">
+                    <td className="py-3 px-0 text-[13px] text-gray-800 font-normal">
+                      Platforms used
+                    </td>
+                    <td className="py-3 px-3 text-center sm:text-right font-mono text-[13px] text-gray-500">
+                      4–6
+                    </td>
+                    <td className="py-3 px-0 text-right font-mono text-[13.5px] font-semibold text-[#9e790d]">
+                      1
+                    </td>
+                  </tr>
+                  <tr className="transition-colors hover:bg-gray-50/40">
+                    <td className="py-3 px-0 text-[13px] text-gray-800 font-normal">
+                      Document Uploads
+                    </td>
+                    <td className="py-3 px-3 text-center sm:text-right font-mono text-[13px] text-gray-500">
+                      4–6 times
+                    </td>
+                    <td className="py-3 px-0 text-right text-[13px] font-medium text-[#9e790d]">
+                      Fetched once from DigiLocker
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -123,7 +133,7 @@ export default function ProductionGrid() {
       {/* Bottom Full-Width Card: Benchmarks panel */}
       <div className="border border-gray-200/90 rounded-[4px] p-5 bg-white shadow-2xs">
         <h3 className="text-[14px] font-medium text-gray-900 tracking-tight mb-4">
-          Predicted Scope : Time per allocation
+          Estimated Processing Time per Applicant
         </h3>
         <BenchmarkLineChart />
       </div>

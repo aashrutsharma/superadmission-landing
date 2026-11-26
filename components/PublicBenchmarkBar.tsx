@@ -43,9 +43,6 @@ export default function PublicBenchmarkBar() {
           </div>
         ))}
       </div>
-      <p className="text-[10px] font-mono text-gray-400 mt-2 text-center uppercase tracking-wider">
-        Counselling portals
-      </p>
     </div>
   );
 }
