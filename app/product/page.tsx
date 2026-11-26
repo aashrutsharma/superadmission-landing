@@ -89,7 +89,7 @@ export default function ProductPage() {
           SUPERADMISSION DASHBOARD
         </p>
         <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-950 leading-tight mb-2.5">
-          One workspace for the entire admission journey
+          The NewGen Admission Suite
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed font-normal mb-6">
           Superadmission brings supported counselling streams into one student workspace. From the dashboard, students can review admission stage cards, check recent activity, open their documents, and continue to choice filling.
