@@ -94,7 +94,7 @@ Our aim is a world-class admission infrastructure for India.
 * **Building for Efficiency**
   By cutting out unnecessary manual steps and repetitive checks, we make admissions simpler and more efficient for everyone involved.
 
-## Architecting Trust Before Scale
+## Embedding Compliance and Security
 
 We are still early in our journey, actively building, testing, and refining Supradmission. What you see today on our Playground is an initial glimpse into the experience we are crafting. Even while we iterate on the product, we are building the underlying infrastructure carefully from the start, aligning every layer with India’s Digital Personal Data Protection (DPDP) Act, the IT Act, 2000, ISO/IEC 27001 security standards, and India Stack privacy protocols. Getting these fundamentals right early ensures the system is dependable and compliant when it serves crores of students.
 
@@ -109,25 +109,25 @@ Team formerly from: IIT Bombay • BITS Pilani • India Stack • DigiLocker
 ## Questions
 
 * **What is Superadmission?**
-  Superadmission is a proposed unified digital public infrastructure for Indian college admissions. It connects students, institutions, and counselling authorities through a shared protocol built on Aadhaar, DigiLocker, and APAAR.
+  Superadmission is a nationwide project to build an admission infrastructure by bringing 40+ counselling authorities along with 58,000+ degree granting institutions/colleges and universities on a single centralised platform. The aim is to make admission process simple, clear and efficient for students and authorities.
 
-* **Who is Superadmission for?**
-  Students navigating competitive counsellings, counselling authorities running admission rounds, institutions managing seat allocations, and policy makers working on India's higher education infrastructure.
-
-* **What is PraveshAI?**
-  PraveshAI is the AI guidance layer of Superadmission. It helps students understand their options, compare colleges, check eligibility, and communicate with counselling authorities. It works from the student's verified profile.
-
-* **What is Manifest?**
-  Manifest is a neutral, verified repository of every degree-granting institution in India. No paid listings, no sponsored placements. Just verified data: seats, branches, approval status, cutoffs, and fees.
+* **What is admission infrastructure?**
+  Admission infrastructure is the shared digital base that connects everyone involved in admissions. It will include one student identity, verified documents, a trusted record of institutions and seats, and dashboard to track progress across counselling processes. India has other digital public infrastructure for identity, documents and academic records, such as Aadhaar, DigiLocker and APAAR. It does not have a shared infrastructure for admissions yet.
 
 * **Is Superadmission affiliated with the government?**
-  Superadmission is a proposed protocol aligned with India Stack, Digital India, and DPDP guidelines. It is not currently a government entity, but is designed for adoption by existing government counselling bodies.
+  Superadmission is an independent initiative and is not affiliated with any government body right now. However, because admissions in India are run by government authorities, we aim to build this in collaboration with them. If you work at a counselling body, government department, or institution, reach out at office@superadmission.com—we would be glad for your input and any contribution.
+
+* **What is counselling?**
+  In Indian higher education, counselling is the formal seat-allocation process that matches your entrance exam rank or score to a college seat. After exam results are declared, you register on a counselling portal, upload your documents, and submit your preferred list of colleges and courses. An allocation system then evaluates every applicant's rank, category rules, and available seats to assign each eligible candidate a seat. India does not have a single national counselling body instead there are up to 40+ major counselling authorities across the country. [Read our guide: What is Counselling?](/blog/what-is-counselling) ↗
+
+* **Where is the Superadmission College Repository?**
+  The Superadmission College Repository is currently under development and not live yet. It is being built as a record of India's all degree-granting higher education institutions covering universities, colleges, and standalone institutions with structured profiles on courses, fees, cutoffs, rankings, facilities and much more sourced directly from official and verified resources.
 
 ## Writing
 
-* 01 [How counselling authorities can run a fully digital spot round](https://docs.superadmission.com)
-* 02 [What APAAR means for college admissions in India](https://docs.superadmission.com)
-* 03 [Understanding JoSAA: how 50,000+ seats get allocated in 6 rounds](https://docs.superadmission.com)
+* 01 [How Admissions in India Actually Work](/blog/how-admissions-in-india-actually-work)
+* 02 [Education Policy and Digital India](/blog/education-policy-and-digital-india)
+* 03 [Understanding JoSAA: how 50,000+ seats get allocated in 6 rounds](/blog/understanding-josaa)
 
 ## Join us
 

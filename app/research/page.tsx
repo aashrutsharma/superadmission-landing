@@ -62,16 +62,9 @@ export default function ResearchPage() {
           <div className="p-5 flex flex-col justify-between">
             <div>
               <div className="flex items-baseline gap-1 mb-1.5">
-                <span className="text-3xl font-medium text-[#9e790d] tracking-tight">
+                <span className="text-3xl font-medium text-[#9e790d] tracking-tight whitespace-nowrap">
                   4.46 Cr
                 </span>
-                <a
-                  href="#source-aishe"
-                  title="View citation in Sources"
-                  className="text-gray-400 hover:text-[#9e790d] text-xs font-mono ml-0.5 inline-flex items-center no-underline transition-colors"
-                >
-                  ↓
-                </a>
               </div>
               <h3 className="text-[13px] font-medium text-gray-950 mb-1 leading-snug">
                 Students enrolled
@@ -97,7 +90,7 @@ export default function ResearchPage() {
                     ↓
                   </a>
                 </div>
-                <span className="text-[10px] font-mono text-gray-400 bg-gray-50 border border-gray-200 px-1 py-0.2 rounded cursor-help">
+                <span className="text-[10px] font-mono text-[#9e790d] bg-amber-50 border border-amber-200/80 px-1 py-0.2 rounded cursor-help">
                   ⓘ
                 </span>
               </div>
@@ -110,8 +103,11 @@ export default function ResearchPage() {
             </div>
 
             {/* Hover Pop-up Card */}
-            <div className="absolute left-2 right-2 bottom-full mb-2 hidden group-hover:block z-40 pointer-events-none">
-              <div className="bg-gray-950 text-white rounded-[4px] p-3 text-[11px] leading-relaxed shadow-xl border border-gray-800 animate-fadeIn font-normal">
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 hidden group-hover:block z-40 w-80 sm:w-[380px] max-w-[calc(100vw-2rem)] pointer-events-none">
+              <div className="bg-[#9e790d] text-white rounded-[4px] p-3.5 text-[11.5px] leading-relaxed shadow-xl border border-[#84650a] animate-fadeIn font-normal">
+                <div className="text-[10px] font-mono font-medium tracking-wider text-amber-200 uppercase mb-1.5 flex items-center gap-1.5">
+                  <span>◈</span> CONSERVATIVE ESTIMATE
+                </div>
                 If you look up this figure on a search engine or AI tool today, you will often see estimates closer to 100+. Because there is no single official registry of every counselling body in India, we have intentionally used a conservative count representing only the major central and state authorities that handle the highest volume of student applications with certainty. Estimate for yourself the real complexity a student faces.
               </div>
             </div>
@@ -141,6 +137,8 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
+
+      <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 2: GUIDANCE & ACCESS GAPS (Replaces Evaluation Report) */}
       <section id="guidance-gaps" className="mb-12 scroll-mt-20">
@@ -215,6 +213,8 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
+
+      <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 3: STUDENTS */}
       <section id="students" className="mb-12 scroll-mt-20">
@@ -302,6 +302,8 @@ export default function ResearchPage() {
         </div>
       </section>
 
+      <div className="border-t border-gray-100 my-10" />
+
       {/* SECTION 4: GROWTH */}
       <section id="growth" className="mb-12 scroll-mt-20">
         <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
@@ -334,6 +336,8 @@ export default function ResearchPage() {
         <GerProjectionChart />
       </section>
 
+      <div className="border-t border-gray-100 my-10" />
+
       {/* SECTION 5: RESERVATIONS */}
       <section id="reservations" className="mb-12 scroll-mt-20">
         <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
@@ -345,13 +349,15 @@ export default function ResearchPage() {
 
         <div className="mb-6 text-[13.5px] text-gray-600 leading-relaxed font-normal">
           <p>
-            A seat allocation system has to apply several layers of rules at once.
+            Every seat allotment in India involves applying overlapping vertical categories, state domicile quotas, horizontal sub-quotas, and extra supernumerary pools simultaneously. The percentages, seat-conversion logic, and priority orders vary across counselling authorities and admission rounds and maintaining accuracy at scale demands a rule engine built specifically for these multi-layered matrices.
           </p>
         </div>
 
         {/* Reservation Flow Diagram */}
         <ReservationFlowDiagram />
       </section>
+
+      <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 6: SEAT WASTAGE */}
       <section id="seat-wastage" className="mb-12 scroll-mt-20">
@@ -376,6 +382,8 @@ export default function ResearchPage() {
         <SeatWastageDonutChart />
       </section>
 
+      <div className="border-t border-gray-100 my-10" />
+
       {/* SECTION 7: INSTITUTIONS */}
       <section id="institutions" className="mb-12 scroll-mt-20">
         <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
@@ -391,6 +399,8 @@ export default function ResearchPage() {
         {/* Stacked Bar Chart */}
         <InstitutionGrowthChart />
       </section>
+
+      <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 8: ACCESSIBILITY */}
       <section id="accessibility" className="mb-12 scroll-mt-20">
@@ -454,6 +464,8 @@ export default function ResearchPage() {
           </div>
         </div>
       </section>
+
+      <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 9: SOURCES */}
       <section id="sources" className="mb-12 scroll-mt-20">
@@ -617,7 +629,10 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <div className="border-t border-gray-100 pt-8">
+      <div className="border-t border-gray-100 my-10" />
+
+      {/* FOOTER */}
+      <div>
         <Footer />
       </div>
     </div>

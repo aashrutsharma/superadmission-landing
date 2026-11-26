@@ -3,6 +3,10 @@
 export interface FAQItem {
   question: string;
   answer: string;
+  link?: {
+    text: string;
+    href: string;
+  };
 }
 
 export interface BlogPost {
@@ -29,48 +33,52 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "What is Superadmission?",
     answer:
-      "Superadmission is a proposed unified digital public infrastructure for Indian college admissions. It connects students, institutions, and counselling authorities through a shared protocol built on Aadhaar, DigiLocker, and APAAR.",
+      "Superadmission is a nationwide project to build an admission infrastructure by bringing 40+ counselling authorities along with 58,000+ degree granting institutions/colleges and universities on a single centralised platform. The aim is to make admission process simple, clear and efficient for students and authorities.",
   },
   {
-    question: "Who is Superadmission for?",
+    question: "What is admission infrastructure?",
     answer:
-      "Students navigating competitive counsellings, counselling authorities running admission rounds, institutions managing seat allocations, and policy makers working on India's higher education infrastructure.",
-  },
-  {
-    question: "What is PraveshAI?",
-    answer:
-      "PraveshAI is the AI guidance layer of Superadmission. It helps students understand their options, compare colleges, check eligibility, and communicate with counselling authorities. It works from the student's verified profile.",
-  },
-  {
-    question: "What is Manifest?",
-    answer:
-      "Manifest is a neutral, verified repository of every degree-granting institution in India. No paid listings, no sponsored placements. Just verified data: seats, branches, approval status, cutoffs, and fees.",
+      "Admission infrastructure is the shared digital base that connects everyone involved in admissions. It will include one student identity, verified documents, a trusted record of institutions and seats, and dashboard to track progress across counselling processes. India has other digital public infrastructure for identity, documents and academic records, such as Aadhaar, DigiLocker and APAAR. It does not have a shared infrastructure for admissions yet.",
   },
   {
     question: "Is Superadmission affiliated with the government?",
     answer:
-      "Superadmission is a proposed protocol aligned with India Stack, Digital India, and DPDP guidelines. It is not currently a government entity, but is designed for adoption by existing government counselling bodies.",
+      "Superadmission is an independent initiative and is not affiliated with any government body right now. However, because admissions in India are run by government authorities, we aim to build this in collaboration with them. If you work at a counselling body, government department, or institution, reach out at office@superadmission.com—we would be glad for your input and any contribution.",
+  },
+  {
+    question: "What is counselling?",
+    answer:
+      "In Indian higher education, counselling is the formal seat-allocation process that matches your entrance exam rank or score to a college seat. After exam results are declared, you register on a counselling portal, upload your documents, and submit your preferred list of colleges and courses. An allocation system then evaluates every applicant's rank, category rules, and available seats to assign each eligible candidate a seat. India does not have a single national counselling body instead there are up to 40+ major counselling authorities across the country.",
+    link: {
+      text: "Read our guide: What is Counselling?",
+      href: "/blog/what-is-counselling",
+    },
+  },
+  {
+    question: "Where is the Superadmission College Repository?",
+    answer:
+      "The Superadmission College Repository is currently under development and not live yet. It is being built as a record of India's all degree-granting higher education institutions covering universities, colleges, and standalone institutions with structured profiles on courses, fees, cutoffs, rankings, facilities and much more sourced directly from official and verified resources.",
   },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "digital-spot-round",
-    title: "How counselling authorities can run a fully digital spot round",
-    author: "Superadmission Team",
-    date: "Nov 2026",
+    slug: "how-admissions-in-india-actually-work",
+    title: "How Admissions in India Actually Work",
+    author: "Unnati Vijay - Founder",
+    date: "2 Nov 2026",
     readTime: "6 min read",
     excerpt:
-      "Spot rounds are notoriously manual. Here is a blueprint for running them entirely online, with real-time seat updates and a full audit trail.",
+      "A student cannot apply directly to a college in India. She must take an exam, go through counselling, and then complete admission. Here is how the full journey works.",
   },
   {
-    slug: "apaar-and-admissions",
-    title: "What APAAR means for college admissions in India",
-    author: "Superadmission Team",
-    date: "Oct 2026",
-    readTime: "5 min read",
+    slug: "education-policy-and-digital-india",
+    title: "Education Policy and Digital India",
+    author: "Unnati Vijay - Founder",
+    date: "26 Nov 2026",
+    readTime: "6 min read",
     excerpt:
-      "APAAR is India's academic bank of credits. We explore what it means for the verification layer of competitive counsellings.",
+      "The big plan for education in India and the digital tools that connect students to colleges. Covers NEP 2020, Aadhaar, DigiLocker, APAAR, the Academic Bank of Credits, DPDP and the IndiaAI Mission.",
   },
   {
     slug: "understanding-josaa",

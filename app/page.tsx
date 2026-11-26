@@ -39,8 +39,32 @@ function FAQAccordion() {
           {openIndex === i && (
             <div className="pb-3.5">
               <p className="text-[13px] text-gray-600 leading-relaxed font-normal">
-                {item.answer}
+                {item.answer.includes("office@superadmission.com") ? (
+                  <>
+                    {item.answer.split("office@superadmission.com")[0]}
+                    <a
+                      href="mailto:office@superadmission.com"
+                      className="text-[#2563eb] hover:underline font-medium"
+                    >
+                      office@superadmission.com
+                    </a>
+                    {item.answer.split("office@superadmission.com")[1]}
+                  </>
+                ) : (
+                  item.answer
+                )}
               </p>
+              {item.link && (
+                <div className="mt-2.5">
+                  <Link
+                    href={item.link.href}
+                    className="text-xs font-medium text-[#2563eb] hover:underline transition-colors inline-flex items-center gap-1 no-underline"
+                  >
+                    <span>{item.link.text}</span>
+                    <span>↗</span>
+                  </Link>
+                </div>
+              )}
             </div>
           )}
         </div>

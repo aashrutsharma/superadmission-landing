@@ -50,7 +50,19 @@ export default function BlogPage() {
                     {post.frontmatter.author || "Superadmission Team"}
                   </span>
                   <span>&middot;</span>
-                  <span>{post.frontmatter.date}</span>
+                  <span>
+                    {(() => {
+                      if (!post.frontmatter.date) return "";
+                      const d = new Date(post.frontmatter.date);
+                      return isNaN(d.getTime())
+                        ? post.frontmatter.date
+                        : d.toLocaleDateString("en-IN", {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          });
+                    })()}
+                  </span>
                   <span>&middot;</span>
                   <span>{post.frontmatter.readTime}</span>
                 </div>
