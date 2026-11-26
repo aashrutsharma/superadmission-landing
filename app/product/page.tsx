@@ -1,8 +1,26 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import {
+  PiKey,
+  PiBatteryEmpty,
+  PiSpinnerGap,
+  PiHourglassMedium,
+  PiLadder,
+  PiRowsPlusBottom,
+  PiFileText,
+  PiGitCommit,
+  PiGitBranch,
+  PiClock,
+  PiClockClockwise,
+  PiMagnifyingGlass,
+  PiFunnel,
+  PiPlusMinus,
+  PiRowsPlusTop,
+  PiPassword,
+} from "react-icons/pi";
 
 interface InstitutionItem {
   id: string;
@@ -65,85 +83,243 @@ const REPOSITORY_DATA: InstitutionItem[] = [
 
 const TOTAL_INSTITUTIONS = 73009;
 
+function PreviewScreenshot({
+  src = "/images/center-stage-3840x2160.png",
+  alt = "Screenshot preview",
+}: {
+  src?: string;
+  alt?: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        className="inline-flex align-middle ml-1.5 align-[-0.22em] group relative rounded-[6px] overflow-hidden border border-gray-200/90 hover:border-gray-400/80 shadow-2xs transition-all duration-200 hover:shadow-xs cursor-pointer"
+        title="Click to view full preview"
+      >
+        <div className="w-[70px] h-[30px] relative bg-gray-100 overflow-hidden">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            unoptimized
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </button>
+
+      {/* Lightbox In-Place Modal */}
+      {isOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-4xl max-h-[85vh] w-full bg-white rounded-[8px] overflow-hidden shadow-2xl border border-gray-200"
+          >
+            <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 bg-gray-50/80">
+              <span className="text-xs font-mono font-medium text-gray-500">{alt}</span>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-400 hover:text-gray-700 transition-colors text-xs px-2 py-0.5 rounded-[4px] hover:bg-gray-200/60 font-mono cursor-pointer"
+              >
+                ✕ Close
+              </button>
+            </div>
+            <div className="p-3 overflow-auto max-h-[calc(85vh-45px)] flex items-center justify-center bg-gray-100/50">
+              <Image
+                src={src}
+                alt={alt}
+                width={1600}
+                height={1000}
+                unoptimized
+                className="w-auto h-auto max-h-[75vh] max-w-full rounded-[4px] object-contain shadow-xs"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export default function ProductPage() {
   const [activeCategory, setActiveCategory] = useState<InstitutionItem | null>(null);
 
   return (
     <div className="w-full">
-      {/* ─── HEADER ─── */}
-      <div className="mb-12">
-        <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
-          PRODUCT
-        </p>
-        <h1 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-950 leading-tight mb-3">
-          Reimagining How students get into college
-        </h1>
-        <p className="text-[14px] text-gray-600 leading-relaxed font-normal max-w-3xl">
-          Explore 70,000+ higher education institutions, compare verified programs, and manage all admission counselling applications across supported authorities. Superadmission combines a national college data repository, profile-aware AI assistance, document management, choice filling, and seat-allocation tracking in one platform.
-        </p>
+      {/* ─── HERO SHOWCASE BANNER ─── */}
+      <div className="w-full h-[420px] sm:h-[460px] min-h-[420px] sm:min-h-[460px] rounded-[6px] border border-gray-200/90 relative overflow-hidden mb-10 shadow-sm bg-white flex items-center justify-center">
+        <Image
+          src="/images/center-stage-3840x2160 (1) new.png"
+          alt="Superadmission Suite Overview"
+          fill
+          priority
+          unoptimized
+          className="object-cover object-center"
+        />
       </div>
 
       {/* ─── SECTION 1: DASHBOARD ─── */}
       <section id="dashboard" className="mb-14 scroll-mt-20">
-        <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
-          SUPERADMISSION DASHBOARD
-        </p>
-        <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-950 leading-tight mb-2.5">
-          The NewGen Admission Suite
+        <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-950 leading-tight mb-2.5 flex items-center flex-wrap gap-1.5">
+          <span>NewGen</span>
+          <Image
+            src="/images/Superadmission_New Wordmark_Device.svg"
+            alt="Superadmission"
+            width={170}
+            height={28}
+            className="inline-block h-[1.12em] w-auto align-[-0.15em] opacity-80"
+            style={{ objectPosition: "left center" }}
+            priority
+          />
+          <span>Suite</span>
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed font-normal mb-6">
-          Superadmission brings supported counselling streams into one student workspace. From the dashboard, students can review admission stage cards, check recent activity, open their documents, and continue to choice filling.
+          Dashboard brings supported counselling streams into single workspace. Students can review each counselling&apos;s progress , check recent activity, see all their documents, and continue to choice filling.
         </p>
 
         {/* Feature List */}
         <div className="space-y-4 mb-6">
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
+            <PiKey className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] mr-1.5 text-gray-900" />
             <strong className="font-semibold text-gray-950">Single Sign On (SSO):</strong>{" "}
-            Students sign in using their Aadhaar-linked identity. Superadmission identifies eligible supported counselling streams and displays them in the counselling switcher bar, so students can move between their counselling workspaces from one place. During onboarding, students give DigiLocker permission once to fetch available documents issued and verified by the relevant authorities. Those documents are then available for the counselling processes that require them.
+            sign in using their{" "}
+            <Image
+              src="/images/Aadhaar_Logo.svg.png"
+              alt="Aadhaar"
+              width={22}
+              height={15}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+            />{" "}
+            Aadhaar. Then identifies eligible supported counselling streams and displays them in the counselling switcher bar, so students can move between their counselling workspaces from one place. During onboarding, students give digilocker permission once to fetch available documents issued and verified by the relevant authorities. Those documents are then available for the counselling processes that require them.{" "}
+            <PreviewScreenshot alt="Single Sign On Preview" />
           </div>
 
+          <div className="w-10 h-px bg-gray-200/90" />
+
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
+            <PiBatteryEmpty className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] mr-1.5 text-gray-900" />
             <strong className="font-semibold text-gray-950">Counselling Switcher:</strong>{" "}
-            After Aadhaar-based sign-in, eligible supported counselling streams appear in the counselling switcher bar. Students can select a stream to view its admission stages, requirements, activity, documents, and saved choices. The streams shown depend on the student’s eligibility and the counselling services connected to Superadmission.
+            After Aadhaar-based sign-in, eligible supported counselling streams appear in the counselling switcher bar. Students can select a counselling to view its{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiSpinnerGap className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> progress
+            </span>,{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiHourglassMedium className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> requirements
+            </span>,{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiLadder className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> activity
+            </span> and{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiRowsPlusBottom className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> saved choices
+            </span>.{" "}
+            <PreviewScreenshot alt="Counselling Switcher Preview" />{" "}
+            The streams shown depend on the student’s eligibility and the counselling services connected to Superadmission.
           </div>
 
+          <div className="w-10 h-px bg-gray-200/90" />
+
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
-            <strong className="font-semibold text-gray-950">Fetch verified documents from DigiLocker:</strong>{" "}
-            During onboarding, students give DigiLocker permission to fetch their available documents. Superadmission can then access documents issued by participating authorities, such as academic records and exam documents, for use in eligible counselling processes. Students give this permission once during onboarding, subject to the documents and issuer services available through DigiLocker.
+            <strong className="font-semibold text-gray-950">
+              Fetch verified documents from{" "}
+              <Image
+                src="/images/New Digilocker Icon.svg"
+                alt="DigiLocker"
+                width={18}
+                height={18}
+                unoptimized
+                className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+              />{" "}
+              DigiLocker:
+            </strong>{" "}
+            During onboarding, students give digilocker permission to fetch their available{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiFileText className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> documents
+            </span>. Superadmission can then access documents issued by participating authorities, such as academic records and exam documents, for use in eligible counselling processes. Students give this permission once during onboarding, subject to the documents and issuer services available through DigiLocker.
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Track admission stages:</strong>{" "}
-            Admission stage cards show the student’s current progress in the selected counselling process. Status changes as the student completes steps. Depending on the stream and current stage, cards can include registration, document verification, choice filling, seat allotment, seat acceptance, and reporting.
+            Admission stage cards show the student’s current progress in the selected counselling process. Status changes as the student completes steps. Depending on the stream and current stage, cards can include registration, document verification, choice filling, seat allotment, seat acceptance, and reporting.{" "}
+            <PreviewScreenshot alt="Admission Stages Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Activity history:</strong>{" "}
-            Activity History lists important actions and updates across the student’s counselling streams. Each entry shows what happened, the related institution or counselling body, its timestamp, and a unique commit code. Open an entry for details such as its source, time spent, and update log. Related actions can link to a receipt, choice list, or assistant conversation. Students can also export the activity history to PDF.
+            lists important actions and updates across the student’s counselling streams. Each entry shows what happened, the related institution or counselling body, its timestamp, and a unique{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiGitCommit className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> commit code
+            </span>. Open an entry for details such as its{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiGitBranch className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> source
+            </span>,{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiClock className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> time spent
+            </span>, and{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiClockClockwise className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> update log
+            </span>. Related actions can link to a receipt, choice list, or assistant conversation. Students can also export the activity history to{" "}
+            <Image
+              src="/images/pdf-svg.svg"
+              alt="PDF"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-0.5"
+            />{" "}
+            PDF.{" "}
+            <PreviewScreenshot alt="Activity History Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">All documents:</strong>{" "}
-            All Documents organizes identity documents, academic records, exam scorecards, and counselling certificates. Select a document to view its issuer, details, verification status, and activity history. Available actions depend on the document.
+            All Documents organizes identity documents, academic records, exam scorecards, and counselling certificates. Select a document to view its issuer, details, verification status, and activity history. Available actions depend on the document.{" "}
+            <PreviewScreenshot alt="All Documents Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Fill and organize college choices:</strong>{" "}
-            Choice Filling shows colleges and programs available for the selected counselling stream alongside the student’s ranked preference list. Search and filter the options, add programs, reorder choices, and download the list. Changes autosave.
+            Choice Filling shows colleges and programs available for the selected counselling stream alongside the student’s ranked preference list.{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiMagnifyingGlass className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> Search
+            </span> and{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiFunnel className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> filter
+            </span> the options,{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiPlusMinus className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> add programs
+            </span>,{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiRowsPlusTop className="inline-block w-[1.1em] h-[1.1em] align-[-0.15em] text-gray-800" /> reorder choices
+            </span>, and{" "}
+            <Image
+              src="/images/google-sheets-icon.svg"
+              alt="Google Sheets"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-0.5"
+            />{" "}
+            download the list. Changes autosave.{" "}
+            <PreviewScreenshot alt="Choice Filling Preview" />
           </div>
-        </div>
-
-        {/* CTA Link Button */}
-        <div className="mt-5 mb-2">
-          <Link
-            href="https://superadmission.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[4px] text-xs font-medium text-gray-900 bg-gray-50 border border-gray-300 hover:border-gray-900 hover:bg-gray-100 transition-colors shadow-2xs no-underline"
-          >
-            <span>Try the Playground</span>
-            <span className="text-[#9e790d]">→</span>
-          </Link>
         </div>
       </section>
 
@@ -151,56 +327,124 @@ export default function ProductPage() {
 
       {/* ─── SECTION 2: ADMISSIONS INTELLIGENCE ASSISTANT ─── */}
       <section id="assistant" className="mb-14 scroll-mt-20">
-        <p className="text-[10px] font-mono font-medium text-gray-400 uppercase tracking-wider mb-2">
-          ADMISSIONS INTELLIGENCE ASSISTANT
-        </p>
+        <div className="mb-3.5">
+          <Image
+            src="/images/PraveshAI Logo_new.png"
+            alt="PraveshAI"
+            width={140}
+            height={26}
+            className="h-[25px] w-auto object-contain object-left"
+            style={{ objectPosition: "left center" }}
+            priority
+          />
+        </div>
         <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-950 leading-tight mb-2.5">
-          Guidance for every step of college counselling
+          Domain-Grounded Agentic AI
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed mb-6 font-normal">
-          The Admissions Intelligence Assistant helps students understand their options across supported college counselling streams. It uses relevant student profile details to provide guidance.
+          PraveshAI is a domain-specific admissions intelligence system that brings together student profiles, verified counselling data, Indian admission rules and intelligent workflows to help students assess their options, simulate allotment scenarios, manage documentation and make informed decisions throughout the college admission process.
         </p>
 
         {/* Assistant Core Capabilities */}
         <div className="space-y-4 mb-8">
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
-            <strong className="font-semibold text-gray-950">Profile-Aware Admissions Guidance:</strong>{" "}
-            The assistant uses available details such as exam scores, rank, category, domicile, active counselling stream, and saved preferences to explain eligibility, compare options, and identify possible next steps. Its responses can reflect updates in the student’s workspace and the latest information available to Superadmission.
+            <strong className="font-semibold text-gray-950">Personalised Admissions Guidance:</strong>{" "}
+            Uses the student&apos;s rank, exam scores, category, domicile, counselling stream and saved preferences to assess eligibility, compare colleges and suggest relevant next steps based on their latest profile and available admission data.{" "}
+            <PreviewScreenshot alt="Personalised Admissions Guidance Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Seat Allocation Simulation & Scenario Analysis:</strong>{" "}
-            The assistant works with Superadmission’s seat allocation simulator to explain possible allotments by counselling round, including the provisional seat, applicable fee, and higher preferences that may remain in reach. It can also compare scenarios involving a different rank, choice order, or Float, Slide, and Freeze decision.
+            The assistant works with Superadmission’s seat allocation simulator to explain possible allotments by counselling round, including the provisional seat, applicable fee, and higher preferences that may remain in reach. It can also compare scenarios involving a different rank, choice order, or Float, Slide, and Freeze decision.{" "}
+            <PreviewScreenshot alt="Seat Allocation Simulation Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Draft choice lists:</strong>{" "}
-            Based on the student’s profile, priorities, and relevant counselling data, the assistant can prepare a suggested choice list for review. Students can download the draft and discuss it with family before deciding whether to enter those preferences in the Choice Filling workspace. The draft does not change the saved choice list.
+            Based on the student’s profile, priorities, and relevant counselling data, the assistant can prepare a suggested choice list for review. Students can download the draft and discuss it with family before deciding whether to enter those preferences in the Choice Filling workspace. The draft does not change the saved choice list.{" "}
+            <PreviewScreenshot alt="Draft Choice Lists Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">OCR and Intelligent Document Processing (IDP):</strong>{" "}
-            Students can upload scorecards, certificates, college brochures or seat matrices for analysis. OCR extracts text and relevant data from these documents, while IDP classifies, structures and interprets the extracted information to identify required fields, verify certificate dates, compare details with available cutoff data and flag missing, inconsistent or potentially incorrect information for review.
+            Students can upload scorecards, certificates, college brochures or seat matrices for analysis. OCR extracts text and relevant data from these documents, while IDP classifies, structures and interprets the extracted information to identify required fields, verify certificate dates, compare details with available cutoff data and flag missing, inconsistent or potentially incorrect information for review.{" "}
+            <PreviewScreenshot alt="OCR and IDP Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Document and rule guidance:</strong>{" "}
-            The assistant can use document statuses and available counselling information to explain requirements such as eligibility, quotas, certificate rules, and verification steps. It can identify missing or unclear details for the student to check.
+            The assistant can use document statuses and available counselling information to explain requirements such as eligibility, quotas, certificate rules, and verification steps. It can identify missing or unclear details for the student to check.{" "}
+            <PreviewScreenshot alt="Document and Rule Guidance Preview" />
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Email drafting with connected services:</strong>{" "}
-            The assistant can prepare emails about document verification, pending certificates, fee reconciliation, quota mapping, or portal issues. With the student’s permission, it can use connected services such as Gmail to prepare a draft for review. The student reviews and sends the email.
+            The assistant can prepare emails about document verification, pending certificates, fee reconciliation, quota mapping, or portal issues. With the student’s permission, it can use connected services such as{" "}
+            <Image
+              src="/images/Gmail_icon_(2020).svg.webp"
+              alt="Gmail"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+            />{" "}
+            Gmail /{" "}
+            <Image
+              src="/images/Mail_(iOS).svg.webp"
+              alt="Apple Mail"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+            />{" "}
+            Mail to prepare a draft for review. The student reviews and sends the email.
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Calendar and task planning:</strong>{" "}
-            With permission to use connected services, the assistant can help organize counselling deadlines and next steps in Google Calendar or Microsoft To Do. Students review the proposed dates or tasks and authorize any changes before they are added.
+            With permission to use connected services, the assistant can help organize counselling deadlines and next steps in{" "}
+            <Image
+              src="/images/Google_Calendar_icon_(2020).svg.svg"
+              alt="Google Calendar"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+            />{" "}
+            Google Calendar or{" "}
+            <Image
+              src="/images/microsoft-to-do.svg"
+              alt="Microsoft To-Do"
+              width={16}
+              height={16}
+              unoptimized
+              className="inline-block h-[1.15em] w-auto align-[-0.2em] mx-1"
+            />{" "}
+            Microsoft To-Do. Students review the proposed dates or tasks and authorize any changes before they are added.
           </div>
+
+          <div className="w-10 h-px bg-gray-200/90" />
 
           <div className="text-[14px] text-gray-600 leading-relaxed font-normal">
             <strong className="font-semibold text-gray-950">Student-controlled actions:</strong>{" "}
-            The assistant can suggest updates to a choice list and other workspace actions. It explains the proposed change and waits for the student’s approval. Clearing or deleting preferences requires PIN confirmation.
+            The assistant can suggest updates to a choice list and other workspace actions. It explains the proposed change and waits for the student’s approval. Clearing or deleting preferences requires{" "}
+            <span className="text-gray-900 font-medium inline-flex items-center gap-0.5">
+              <PiPassword className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] text-gray-800" /> PIN
+            </span>{" "}
+            confirmation.{" "}
+            <PreviewScreenshot alt="Student-Controlled Actions Preview" />
           </div>
         </div>
 

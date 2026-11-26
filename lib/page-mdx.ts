@@ -24,7 +24,7 @@ Superadmission is a nationwide project to bring 40+ counselling authorities alon
 
 We are reimagining how India gets into college.
 
-Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% Gross Enrollment Ratio (GER) and equitable opportunity requires a world class technical backing.
+Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% gross enrollment ratio (GER) and equitable opportunity requires a world class technical backing.
 
 ## What real problem is this even solving ?
 
@@ -94,9 +94,9 @@ Our aim is a world-class admission infrastructure for India.
 * **Building for Efficiency**
   By cutting out unnecessary manual steps and repetitive checks, we make admissions simpler and more efficient for everyone involved.
 
-## Embedding Compliance and Security
+## Compliance and Security
 
-We are still early in our journey, actively building, testing, and refining Supradmission. What you see today on our Playground is an initial glimpse into the experience we are crafting. Even while we iterate on the product, we are building the underlying infrastructure carefully from the start, aligning every layer with India’s Digital Personal Data Protection (DPDP) Act, the IT Act, 2000, ISO/IEC 27001 security standards, and India Stack privacy protocols. Getting these fundamentals right early ensures the system is dependable and compliant when it serves crores of students.
+All of this is being built with privacy, security and compliance in mind. Our implementation plans account for the DPDP Act, IT Act, 2000 and India Stack privacy protocols, with ISO/IEC 27001 as a security target. They also include user consent, data governance and operational safeguards.
 
 ## A team dedicated to fixing how India gets into college
 
@@ -104,7 +104,7 @@ We are an ambitious independent team bringing together experience in large-scale
 
 Led by Aashrut Sharma and Unnati Vijay
 
-Team formerly from: IIT Bombay • BITS Pilani • India Stack • DigiLocker
+team formerly from & affiliated: IIT Delhi • Stanford • BITS Pilani (Dubai Campus) • Seneca • NYU
 
 ## Questions
 
@@ -129,11 +129,11 @@ Team formerly from: IIT Bombay • BITS Pilani • India Stack • DigiLocker
 * 02 [Education Policy and Digital India](/blog/education-policy-and-digital-india)
 * 03 [Understanding JoSAA: how 50,000+ seats get allocated in 6 rounds](/blog/understanding-josaa)
 
-## Join us
+## A change of this scale needs people who understand the system
 
-### A system this large cannot be reimagined in isolation.
+We've been working through these challenges in depth, and while this website may not have answers to every question, much of our research, thinking and proposed solutions is documented separately. There is still a lot to discuss, validate and get right, and we'd like to bring these conversations closer to the people who understand the system and can help turn ideas into something practical.
 
-We're building towards a more efficient admissions ecosystem. We recognise that this undertaking extends beyond technology. It will require institutional participation, administrative alignment, policy considerations, regulatory cooperation and sustained government support. If you're an institution, counselling authority, researcher, technologist or someone interested in the future of higher education admissions, we'd like to hear from you.
+Whether you're a student, a parent, someone from a college administration or counselling authority, we'd really like to hear from you. Maybe there's a problem you've faced that still needs solving, something you feel we should be working on, or simply an idea you'd like us to consider. Just drop us a WhatsApp message, a few lines, a short video or a voice note, whatever feels easiest. We'd genuinely value it, and your suggestion might just be where our next piece of work begins.
 
-[Connect with us](mailto:office@superadmission.com)
++919717490005 (Messages anytime just a small request to avoid calls at odd hours)
 `;

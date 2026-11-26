@@ -14,7 +14,8 @@ import AgentMarkdownView from "@/components/AgentMarkdownView";
 import { FAQ_ITEMS, BLOG_POSTS } from "@/lib/content";
 import { SUPERADMISSION_MDX } from "@/lib/page-mdx";
 import { useViewMode } from "@/lib/view-mode";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Copy, Check } from "lucide-react";
+import Image from "next/image";
 import { PiGlobeSimple, PiKey } from "react-icons/pi";
 import AadhaarIcon from "@/components/AadhaarIcon";
 import ApaarLogo from "@/components/ApaarLogo";
@@ -78,6 +79,15 @@ function FAQAccordion() {
 
 export default function Home() {
   const { mode } = useViewMode();
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [phoneRevealed, setPhoneRevealed] = useState(false);
+
+  const handleCopyPhone = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    navigator.clipboard.writeText("+919717490005");
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2200);
+  };
 
   // If Agent mode is active, display the raw, clean, copiable MDX view (Screenshot 2)
   if (mode === "agent") {
@@ -153,13 +163,25 @@ export default function Home() {
       <section id="mission" className="mb-14 scroll-mt-20">
         <div className="flex flex-col gap-3.5 text-[14px] text-gray-700 leading-relaxed font-normal">
           <p>
+            <span className="inline-block w-[1.3em] h-[1.3em] align-[-0.22em] mr-1.5 rounded-sm overflow-hidden shrink-0">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="w-full h-full object-cover"
+              >
+                <source src="/videos/superadmission_metal%20effect_icon_comp.mp4" type="video/mp4" />
+              </video>
+            </span>
             Superadmission is a nationwide project to bring 40+ counselling authorities along with 58,000+ degree granting institutions/colleges and universities on a single centralised platform.
           </p>
           <p className="text-gray-950 font-medium text-[16px] mt-1">
             We are reimagining how India gets into college.
           </p>
           <p>
-            Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% Gross Enrollment Ratio (GER) and equitable opportunity requires a world class technical backing.
+            Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% gross enrollment ratio (GER) and equitable opportunity requires a world class technical backing.
           </p>
         </div>
       </section>
@@ -174,7 +196,10 @@ export default function Home() {
         <p className="text-[14px] text-gray-600 leading-relaxed mb-6 font-normal">
           India’s higher education ecosystem serves over 4.5 crore students across a disorganised{" "}
           <PiGlobeSimple className="inline-block w-[1.15em] h-[1.15em] align-[-0.18em] mx-0.5 text-current" />
-          network of authorities, institutions, and portals. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
+          network of{" "}
+          <span className="underline decoration-[#9e790d] decoration-[1.5px] underline-offset-3">authorities</span>,{" "}
+          <span className="underline decoration-[#9e790d] decoration-[1.5px] underline-offset-3">institutions</span>, and{" "}
+          <span className="underline decoration-[#9e790d] decoration-[1.5px] underline-offset-3">portals</span>. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
         </p>
         <div className="flex flex-col gap-1.5">
           <FeatureCard
@@ -319,23 +344,74 @@ export default function Home() {
 
       <div className="border-t border-gray-100 my-10" />
 
-      {/* SECTION 6: JOIN US */}
+      {/* SECTION 6 */}
       <section id="careers" className="mb-14 scroll-mt-20">
-        <p className="text-[11px] font-mono text-[#9e790d] font-medium uppercase tracking-wider mb-2">
-          Join us
-        </p>
         <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-3">
-          A system this large cannot be reimagined in isolation.
+          A change of this scale needs people who understand the system
         </h2>
         <p className="text-[14px] text-gray-600 leading-relaxed mb-4 max-w-xl font-normal">
-          We&apos;re building towards a more efficient admissions ecosystem. We recognise that this undertaking extends beyond technology. It will require institutional participation, administrative alignment, policy considerations, regulatory cooperation and sustained government support. If you&apos;re an institution, counselling authority, researcher, technologist or someone interested in the future of higher education admissions, we&apos;d like to hear from you.
+          We&apos;ve been working through these challenges in depth, and while this website may not have answers to every question, much of our research, thinking and proposed solutions is documented separately. There is still a lot to discuss, validate and get right, and we&apos;d like to bring these conversations closer to the people who understand the system and can help turn ideas into something practical.
         </p>
-        <a
-          href="mailto:office@superadmission.com"
-          className="text-xs font-medium text-[#2563eb] hover:underline transition-colors inline-flex items-center gap-1 no-underline"
-        >
-          Connect with us ↗
-        </a>
+        <p className="text-[14px] text-gray-600 leading-relaxed mb-6 max-w-xl font-normal">
+          Whether you&apos;re a student, a parent, someone from a college administration or counselling authority, we&apos;d really like to hear from you. Maybe there&apos;s a problem you&apos;ve faced that still needs solving, something you feel we should be working on, or simply an idea you&apos;d like us to consider.{" "}
+          <span className="text-gray-950 font-normal">
+            Just drop us a{" "}
+            <Image
+              src="/images/WhatsApp.svg"
+              alt="WhatsApp"
+              width={16}
+              height={16}
+              unoptimized
+              className="w-[1em] h-[1em] inline-block align-[-0.14em] mx-0.5 shrink-0"
+            />{" "}
+            WhatsApp message, a few lines, a short video or a voice note, whatever feels easiest. We&apos;d genuinely value it, and your suggestion might just be where our next piece of work begins.
+          </span>
+        </p>
+
+        {/* Phone Copy Action + Polite Guidance (Blurred until clicked) */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
+          <div
+            onClick={() => !phoneRevealed && setPhoneRevealed(true)}
+            className={`relative flex items-center gap-2.5 bg-gray-50/90 border border-gray-200/90 rounded-[4px] px-3.5 py-2 w-fit transition-all shadow-2xs group ${
+              phoneRevealed ? "hover:bg-gray-100/80 cursor-default" : "cursor-pointer hover:bg-gray-100"
+            }`}
+            title={phoneRevealed ? undefined : "Click to reveal phone number"}
+          >
+            <div
+              className={`flex items-center gap-2.5 transition-all duration-300 ${
+                phoneRevealed ? "filter-none select-auto opacity-100" : "filter blur-[5px] select-none opacity-60"
+              }`}
+            >
+              <a
+                href={phoneRevealed ? "https://wa.me/919717490005" : undefined}
+                target={phoneRevealed ? "_blank" : undefined}
+                rel={phoneRevealed ? "noopener noreferrer" : undefined}
+                className="font-mono text-[13.5px] font-semibold text-gray-950 tracking-tight hover:text-[#9e790d] transition-colors no-underline"
+              >
+                +919717490005
+              </a>
+              <button
+                type="button"
+                onClick={phoneRevealed ? handleCopyPhone : undefined}
+                aria-label="Copy phone number"
+                className="p-1 text-gray-400 hover:text-gray-900 transition-all cursor-pointer rounded-xs flex items-center justify-center relative active:scale-95"
+              >
+                {copiedPhone ? (
+                  <span className="flex items-center gap-1 text-[11px] font-mono text-[#9e790d] font-semibold animate-in fade-in zoom-in-95 duration-200">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                    <span>Copied</span>
+                  </span>
+                ) : (
+                  <Copy className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          <span className="text-[12px] text-gray-500 font-normal leading-normal">
+            Messages anytime just a small request to avoid calls at odd hours
+          </span>
+        </div>
       </section>
 
       <div className="border-t border-gray-100" />

@@ -31,7 +31,7 @@ export default function ProductionGrid() {
                       Today
                     </th>
                     <th className="py-2.5 px-0 text-right">
-                      <SuperadmissionWordmark className="h-[12px] w-auto ml-auto text-[#9e790d] inline-block align-middle" />
+                      <SuperadmissionWordmark className="h-[15px] w-auto ml-auto text-[#9e790d] inline-block align-middle" />
                     </th>
                   </tr>
                 </thead>

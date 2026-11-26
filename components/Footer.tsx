@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import FairholdAnimatedLogo from "@/components/FairholdAnimatedLogo";
 import { FaXTwitter, FaLinkedin, FaReddit, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
@@ -15,14 +15,8 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-16 mb-12">
         {/* Brand Column */}
         <div className="max-w-[210px] shrink-0">
-          <Link href="/" className="inline-flex items-center mb-3 no-underline">
-            <Image
-              src="/images/Fairhold Corporation Logo.svg"
-              alt="Fairhold Corporation"
-              width={160}
-              height={30}
-              className="h-[22px] w-auto object-contain opacity-75 hover:opacity-100 transition-opacity"
-            />
+          <Link href="/" className="inline-flex items-center mb-3 no-underline group">
+            <FairholdAnimatedLogo className="h-[26px] sm:h-[28px] w-auto opacity-[0.92] hover:opacity-100 transition-opacity" />
           </Link>
           <p className="text-[11px] text-gray-500 leading-relaxed mb-3 font-normal">
             The unified digital public infrastructure for Indian academic admissions.
