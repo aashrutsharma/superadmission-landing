@@ -20,68 +20,91 @@ Works with
 * [![Digital India](https://superadmission.com/images/digital-india.svg)](https://digitalindia.gov.in "Digital India")
 * [![MeitY](https://superadmission.com/images/meity.svg)](https://www.meity.gov.in "MeitY")
 
-The path to a fair higher education ecosystem is to scale [in-context verified admissions](https://docs.superadmission.com/superadmission/what-is-superadmission) that work with **any state council, any central authority**, and across all varieties of reservation matrices. As entrance exams multiply and counselling processes fragment into 600+ disparate portals, student eligibility and seat allocation should be separated from ad-hoc software and be universally interoperable.
+Superadmission is a nationwide project to bring 40+ counselling authorities along with 58,000+ degree granting institutions/colleges and universities on a single centralised platform.
 
-[Admission fragmentation is no longer a constraint.](https://docs.superadmission.com/superadmission/our-mission-and-vision)
+We are reimagining how India gets into college.
 
-Entrance tests scale on paper and test centers, but traditional portals fail to adapt in real time to round vacancies and duplicate seat blocking.
+Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% Gross Enrollment Ratio (GER) and equitable opportunity requires a world class technical backing.
 
-We build all the hard infrastructure parts of a scalable admission system, from automated document hash verification via DigiLocker and APAAR to live algorithmic seat reconciliation during spot rounds.
+## What real problem is this even solving ?
 
-Figure 1. Raw documents, ranks, and choice matrices enter Superadmission. PraveshAI verifies and reconciles eligibility against the admission matrix, and seats are cryptographically allocated directly into the student context across all integrated counselling bodies.
+India’s higher education ecosystem serves over 4.5 crore students across a disorganised network of authorities, institutions, and portals. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
 
-## What we do
+* **Confusing Portals and Hard-to-Follow Rules Hold Students Back**
+  Because structured guidance is hard to find, students who struggle with admission rules and portals often miss out on seats they deserve.
 
-* **Thinking and guidance that stays with the student.**
-  PraveshAI analyses candidate rank, domicile, category, and eligibility rules across 600+ counselling authorities in real time. It answers cutoffs, simulates multi-round choices, and generates pre-verified application dossiers directly from the student profile.
+* **Systems Depend on Human workforce**
+  Because existing platforms require scanned document upload, institutions rely on slow, manual verification and round-the-clock human intervention.
 
-* **Every degree-granting seat, verified.**
-  A neutral, real-time repository of every approved college, program, fee structure, and historical cutoff in India. Zero sponsored placements, zero algorithmic bias, powered by open institutional audits.
+* **Students Manually Track Each Website for New Notifications**
+  Counseling alerts and round schedules are buried on cluttered websites rather than sent directly, forcing applicants to manually check multiple portals daily or risk missing an opportunity.
 
-* **The hard infrastructure, done.**
-  Live algorithmic seat reconciliation and digital spot rounds that eliminate 18-hour physical campus queues. Seats update in real time with end-to-end cryptographic audit trails.
+* **System Slowdowns During Peak Traffic**
+  Existing platforms at times slow down or become unresponsive when thousands of students access them at once, leading to temporary outages and lost unsaved changes.
 
-Scale and Enterprise include advanced seat matrix reconciliation with real-time audit. Free and Candidate tiers keep standard document verification. [Explore document support](https://docs.superadmission.com).
+* **Repetitive Forms Across Scattered Portals**
+  The admission journey is split across multiple portals, forcing fresh high school graduates into exhausting, repetitive data entry and document uploads.
+
+Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants. If today’s fragmented systems already struggle under current demand, how will they withstand twice the load? That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
 
 [Read more about the specifics](https://docs.superadmission.com/superadmission/what-is-superadmission)
 
+## What are we building?
+
+The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a single sign-on linked with Aadhaar or APAAR ID that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
+
+[see our Product Page →](/product)
+
+Figure 1. Verified credentials, exam ranks, and student choices enter Supradmission. The allocation engine checks eligibility and reservation rules against Manifest’s verified seat matrix, delivering confirmed seat allotments directly to the student’s Dashboard across participating counselling bodies.
+
 ## In production
 
-Our promise is the most reliable admissions infrastructure for India: the kind students feel, not just the kind that tops a benchmark.
+Our aim is a world-class admission infrastructure for India.
 
-### Allocation latency
-* PER CANDIDATE, ON PRODUCTION TRAFFIC
-* ELIGIBILITY: Server 142ms, End to End 280ms
-* ALLOCATION: Server 118ms, End to End 195ms
+### Today vs One day
+* PER CANDIDATE, ACROSS ONE ADMISSION CYCLE
+* Platforms used: Today 4-6, Superadmission 1
+* Times Document Uploads Are Required: Today 4-6 times, Superadmission Docs fetched once from digilocker
 
 ### Independent benchmarks
 * NATIONAL ADMISSIONS AUDIT, 2026
 * "Superadmission performs best overall, achieving round reconciliation completion rate of 99.82% and the lowest vacancy discrepancy rate of 0.08%."
 * [Read the audit](https://docs.superadmission.com) [How we compare to legacy](https://docs.superadmission.com)
 
-### Applications processed
-* 1.5M+ applications processed per admission season.
-* 1,200+ institutions and authorities across 28 states and union territories.
+### Application Processed
+* 1.5 Crore + applications processed per admission cycle.
+* 58,000+ institutions and authorities across 28 states and union territories.
 
-### Public benchmarks
-* #1 in Round Speed, Seat Retention, and Concurrent Stability on Joint Seat Allocation.
+### Accessibility
+* #1 for students of diverse backgrounds across Counselling portals.
+* [See the research](/research)
 
-### Our benchmarks
-* Cost per allocation: ₹ 14.20 (78% cheaper)
-* Rounds completed on time: 99.8% (up from 68%)
+### Predicted Scope : Time per allocation
+* Average time per stage of admission: 5.3 hrs (86% more time efficient than other portals)
+* Other portals average: 36.75 hrs vs Superadmission: 5.3 hrs
 
-## Architecture
+## Principles we’re building by
 
-superadmission runs everywhere, even in air-gapped environments.
-We build all the critical infrastructure ourselves. Which means we can deploy it wherever state and university data lives.
+* **Admissions Based on Merit**
+  A student’s admission should be decided by their results in competitive exams and hard work.
 
-* 001 In state data center: Scale and Government, air-gapped on Enterprise
-* 002 In sovereign VPC: Scale and Enterprise on NIC and Cloud
-* 003 On campus node: Superadmission Local, free for spot rounds and offline reporting
+* **Inclusive Design**
+  With regional language support, accessible UI, and domain-trained AI guidance for all, we aim to give every student an equitable opportunity to succeed.
 
-## Enterprise security
+* **Building for Efficiency**
+  By cutting out unnecessary manual steps and repetitive checks, we make admissions simpler and more efficient for everyone involved.
 
-Superadmission is fully compliant with the Digital Personal Data Protection (DPDP) Act 2023, ISO 27001 certified, and integrated with sovereign India Stack standards. We sign SLAs and DPAs, and deploy air-gapped where student data cannot leave government premises.
+## Architecting Trust Before Scale
+
+We are still early in our journey, actively building, testing, and refining Supradmission. What you see today on our Playground is an initial glimpse into the experience we are crafting. Even while we iterate on the product, we are building the underlying infrastructure carefully from the start, aligning every layer with India’s Digital Personal Data Protection (DPDP) Act, the IT Act, 2000, ISO/IEC 27001 security standards, and India Stack privacy protocols. Getting these fundamentals right early ensures the system is dependable and compliant when it serves crores of students.
+
+## A team dedicated to fixing how India gets into college
+
+We are an ambitious independent team bringing together experience in large-scale software, AI systems, and education policy to create verified data systems, domain-trained AI, and public-scale admission infrastructure.
+
+Led by Aashrut Sharma and Unnati Vijay
+
+Team formerly from: IIT Bombay • BITS Pilani • India Stack • DigiLocker
 
 ## Questions
 
@@ -106,9 +129,11 @@ Superadmission is fully compliant with the Digital Personal Data Protection (DPD
 * 02 [What APAAR means for college admissions in India](https://docs.superadmission.com)
 * 03 [Understanding JoSAA: how 50,000+ seats get allocated in 6 rounds](https://docs.superadmission.com)
 
-## Careers
+## Join us
 
-We are a small, dedicated team based in New Delhi and Bengaluru, building the admissions infrastructure layer for every council, university, and candidate in India.
+### A system this large cannot be reimagined in isolation.
 
-[See open roles](mailto:careers@superadmission.com)
+We're building towards a more efficient admissions ecosystem. We recognise that this undertaking extends beyond technology. It will require institutional participation, administrative alignment, policy considerations, regulatory cooperation and sustained government support. If you're an institution, counselling authority, researcher, technologist or someone interested in the future of higher education admissions, we'd like to hear from you.
+
+[Connect with us](mailto:office@superadmission.com)
 `;

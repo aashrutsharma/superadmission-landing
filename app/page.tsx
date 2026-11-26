@@ -126,68 +126,88 @@ export default function Home() {
       <section id="mission" className="mb-14 scroll-mt-20">
         <div className="flex flex-col gap-3.5 text-[14px] text-gray-700 leading-relaxed font-normal">
           <p>
-            The path to a fair higher education ecosystem is to scale{" "}
-            <a
-              href="https://docs.superadmission.com/superadmission/what-is-superadmission"
-              target="_blank"
-              className="text-[#2563eb] font-medium underline underline-offset-2 no-underline hover:underline"
-            >
-              in-context verified admissions
-            </a>{" "}
-            that work with <strong className="font-semibold text-gray-900">any state council, any central authority</strong>, and across all varieties of reservation matrices. As entrance exams multiply and counselling processes fragment into 600+ disparate portals, student eligibility and seat allocation should be separated from ad-hoc software and be universally interoperable.
+            Superadmission is a nationwide project to bring 40+ counselling authorities along with 58,000+ degree granting institutions/colleges and universities on a single centralised platform.
           </p>
           <p className="text-gray-950 font-medium text-[16px] mt-1">
-            Admission fragmentation is no longer a constraint.
+            We are reimagining how India gets into college.
           </p>
           <p>
-            Entrance tests scale on paper and test centers, but traditional portals fail to adapt in real time to round vacancies and duplicate seat blocking.
-          </p>
-          <p>
-            We build all the hard infrastructure parts of a scalable admission system, from automated document hash verification via DigiLocker and APAAR to live algorithmic seat reconciliation during spot rounds.
+            Executing our vision through an innovative framework/architecture that will make the admission ecosystem effortless and efficient for both students and authorities, although this requires ample dismantling and reconfiguration of current processes; we firmly believe the path to 50% Gross Enrollment Ratio (GER) and equitable opportunity requires a world class technical backing.
           </p>
         </div>
-
-        {/* Figure 1. Animated Flowing Line Diagram (Screenshot 4) */}
-        <ProcessFlowDiagram />
       </section>
 
       <div className="border-t border-gray-100 my-10" />
 
       {/* SECTION 2: WHAT WE DO */}
       <section id="what-we-do" className="mb-14 scroll-mt-20">
-        <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-5">
-          What we do
+        <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-2">
+          What real problem is this even solving ?
         </h2>
+        <p className="text-[14px] text-gray-600 leading-relaxed mb-6 font-normal">
+          India’s higher education ecosystem serves over 4.5 crore students across a disorganised network of authorities, institutions, and portals. Rather than acting as a catalyst for opportunity, this complexity often creates unnecessary barriers.
+        </p>
         <div className="flex flex-col gap-1.5">
           <FeatureCard
-            type="praveshai"
-            title="Thinking and guidance that stays with the student."
-            description="PraveshAI analyses candidate rank, domicile, category, and eligibility rules across 600+ counselling authorities in real time. It answers cutoffs, simulates multi-round choices, and generates pre-verified application dossiers directly from the student profile."
+            type="rules"
+            title="Confusing Portals and Hard-to-Follow Rules Hold Students Back"
+            description="Because structured guidance is hard to find, students who struggle with admission rules and portals often miss out on seats they deserve."
           />
           <FeatureCard
-            type="manifest"
-            title="Every degree-granting seat, verified."
-            description="A neutral, real-time repository of every approved college, program, fee structure, and historical cutoff in India. Zero sponsored placements, zero algorithmic bias, powered by open institutional audits."
+            type="workforce"
+            title="Systems Depend on Human workforce"
+            description="Because existing platforms require scanned document upload, institutions rely on slow, manual verification and round-the-clock human intervention."
           />
           <FeatureCard
-            type="spot"
-            title="The hard infrastructure, done."
-            description="Live algorithmic seat reconciliation and digital spot rounds that eliminate 18-hour physical campus queues. Seats update in real time with end-to-end cryptographic audit trails."
+            type="notifications"
+            title="Students Manually Track Each Website for New Notifications"
+            description="Counseling alerts and round schedules are buried on cluttered websites rather than sent directly, forcing applicants to manually check multiple portals daily or risk missing an opportunity."
+          />
+          <FeatureCard
+            type="traffic"
+            title="System Slowdowns During Peak Traffic"
+            description="Existing platforms at times slow down or become unresponsive when thousands of students access them at once, leading to temporary outages and lost unsaved changes."
+          />
+          <FeatureCard
+            type="forms"
+            title="Repetitive Forms Across Scattered Portals"
+            description="The admission journey is split across multiple portals, forcing fresh high school graduates into exhausting, repetitive data entry and document uploads."
           />
         </div>
 
-        <p className="text-xs text-gray-500 mt-5 leading-relaxed font-normal">
-          Scale and Enterprise include advanced seat matrix reconciliation with real-time audit. Free and Candidate tiers keep standard document verification.{" "}
-          <a href="https://docs.superadmission.com" target="_blank" className="text-[#2563eb] hover:underline">
-            Explore document support.
-          </a>
+        <p className="text-[14px] text-gray-700 mt-6 leading-relaxed font-normal">
+          Despite these deep-rooted challenges, India is ambitiously targeting a 50% GER under NEP 2020, a milestone that will nearly double the number of higher education applicants. If today’s fragmented systems already struggle under current demand, how will they withstand twice the load? That is why building a unified, accessible, and efficient admission ecosystem is not just possible but essential.
         </p>
 
-        <div className="mt-3.5">
+        <div className="mt-4">
           <Link href="/product" className="text-xs font-medium text-gray-900 hover:text-[#2563eb] transition-colors no-underline">
             Read more about the specifics ↗
           </Link>
         </div>
+      </section>
+
+      <div className="border-t border-gray-100 my-10" />
+
+      {/* SECTION: WHAT ARE WE BUILDING? */}
+      <section id="what-are-we-building" className="mb-14 scroll-mt-20">
+        <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-2">
+          What are we building?
+        </h2>
+        <p className="text-[14px] text-gray-600 leading-relaxed mb-4 font-normal">
+          The complexity of India’s admissions extends beyond a simple software problem, which is why we are building a single, unified ecosystem that brings different counseling bodies together under one roof, putting students at the center of the journey. Our framework is being designed to offer a single sign-on linked with Aadhaar or APAAR ID that works across participating counseling bodies and institutions, using India Stack and existing DPIs to fetch pre-verified records automatically, alongside a free AI-enabled personalized guidance agent and one shared dashboard to track progress across entrance exams, counseling rounds, and universities.
+        </p>
+
+        <div className="mb-6">
+          <Link
+            href="/product"
+            className="text-xs font-medium text-[#2563eb] hover:underline transition-colors no-underline inline-flex items-center gap-1"
+          >
+            see our Product Page →
+          </Link>
+        </div>
+
+        {/* Figure 1. Updated Process Flow Diagram */}
+        <ProcessFlowDiagram />
       </section>
 
       <div className="border-t border-gray-100 my-10" />
@@ -198,7 +218,7 @@ export default function Home() {
           In production
         </p>
         <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-950 leading-tight mb-7">
-          Our <span className="font-semibold text-gray-950">promise</span> is the most reliable admissions infrastructure for India: the kind students <span className="font-semibold text-gray-950">feel</span>, not just the kind that tops a benchmark.
+          Our aim is a world-class admission infrastructure for India.
         </h2>
 
         {/* Real Production Cards & Real Recharts Graphs (Screenshot 3) */}
@@ -259,19 +279,22 @@ export default function Home() {
 
       <div className="border-t border-gray-100 my-10" />
 
-      {/* SECTION 6: CAREERS */}
+      {/* SECTION 6: JOIN US */}
       <section id="careers" className="mb-14 scroll-mt-20">
-        <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-2.5">
-          Careers
+        <p className="text-[11px] font-mono text-[#9e790d] font-medium uppercase tracking-wider mb-2">
+          Join us
+        </p>
+        <h2 className="text-2xl font-medium tracking-tight text-gray-950 mb-3">
+          A system this large cannot be reimagined in isolation.
         </h2>
-        <p className="text-[14px] text-gray-600 leading-relaxed mb-4 max-w-lg font-normal">
-          We&apos;re a small, dedicated team based in New Delhi and Bengaluru, building the admissions infrastructure layer for every council, university, and candidate in India. If that is the problem you want to spend the next few years on, we would like to hear from you.
+        <p className="text-[14px] text-gray-600 leading-relaxed mb-4 max-w-xl font-normal">
+          We&apos;re building towards a more efficient admissions ecosystem. We recognise that this undertaking extends beyond technology. It will require institutional participation, administrative alignment, policy considerations, regulatory cooperation and sustained government support. If you&apos;re an institution, counselling authority, researcher, technologist or someone interested in the future of higher education admissions, we&apos;d like to hear from you.
         </p>
         <a
-          href="mailto:careers@superadmission.com"
-          className="text-xs font-medium text-gray-900 hover:text-[#2563eb] transition-colors inline-flex items-center gap-1"
+          href="mailto:office@superadmission.com"
+          className="text-xs font-medium text-[#2563eb] hover:underline transition-colors inline-flex items-center gap-1 no-underline"
         >
-          See open roles ↗
+          Connect with us ↗
         </a>
       </section>
 
